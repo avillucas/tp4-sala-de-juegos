@@ -11,7 +11,7 @@ export class AnagramaComponent implements OnInit {
 
   @Output() enviarJuego: EventEmitter<any> = new EventEmitter<any>();
   nuevoJuego: JuegoAnagrama;
-  Mensajes: string;
+  Mensaje: string;
   contador: number;
   palabraDesordenada: string;
 
@@ -31,23 +31,26 @@ export class AnagramaComponent implements OnInit {
   });
 
   Verificar() {
-    console.info('verificando');
+    this.ShowMensaje('Verificando....');
     this.nuevoJuego.PalabraIngresada = this.anagramaForm.get('palabraOrdenada').value;
     if (this.nuevoJuego.verificar()) {
       this.enviarJuego.emit(this.nuevoJuego);
       // this.MostarMensaje('Sos un Genio!!!', true);
-      this.reiniciar();
-      console.info('Gano');
+      this.ShowMensaje('Gano');
     } else {
-      console.info('Perdio');
-      // this.MostarMensaje('#' + this.contador + ' ' + mensaje + ' ayuda :' + this.nuevoJuego.retornarAyuda());
+      this.ShowMensaje('Estuviste Cerca Proba de nuevo!!! o Intenta con otra palabra ');
     }
   }
 
-  private reiniciar() {
+  public Reiniciar() {
     this.nuevoJuego.reiniciar();
     this.palabraDesordenada = this.nuevoJuego.PalabraDesordenada;
   }
+
+  private ShowMensaje(mensaje: string) {
+    this.Mensaje = mensaje;
+  }
+
   ngOnInit() {
     this.nuevoJuego.iniciar();
     this.palabraDesordenada = this.nuevoJuego.PalabraDesordenada;

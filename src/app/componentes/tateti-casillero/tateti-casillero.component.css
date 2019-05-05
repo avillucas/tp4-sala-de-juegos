@@ -1,0 +1,16 @@
+button,
+span {
+  display: block;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+}
+span {
+  background-color: red;
+  font-size: 5em;
+  text-align: center;
+  vertical-align: middle;
+}
+button {
+  background-color: green;
+}

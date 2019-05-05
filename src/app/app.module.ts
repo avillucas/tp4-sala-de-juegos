@@ -37,6 +37,7 @@ import { InputJugadoresComponent } from './componentes/input-jugadores/input-jug
 import { SexoPipe } from './pipes/sexo.pipe';
 import { TatetiComponent } from './componentes/tateti/tateti.component';
 import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
+import { TatetiCasilleroComponent } from './componentes/tateti-casillero/tateti-casillero.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/pi
     InputJugadoresComponent,
     SexoPipe,
     TatetiComponent,
-    PiedraPapelTijeraComponent
+    PiedraPapelTijeraComponent,
+    TatetiCasilleroComponent
   ],
   imports: [
     BrowserModule,

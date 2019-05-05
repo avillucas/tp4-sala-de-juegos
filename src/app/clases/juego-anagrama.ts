@@ -2,7 +2,7 @@ import { Juego } from './juego';
 
 export class JuegoAnagrama extends Juego {
 
-  // @todo Analizar como traer el diccionario desde algun json o similar
+  // @todo Analizar como traer el diccionario desde algun enumerado
   // @todo evitar que salga dos veces la misma palabra
   private palabras = ['casa', 'cocina', 'topo', 'armando', 'tijeras', 'herramienta', 'pachanga'];
   private palabraDesordenada: string;

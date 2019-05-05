@@ -13,5 +13,6 @@
    [formControl]="palabraOrdenadaControl"
    />
   <button type="submit"  [disabled]="!anagramaForm.valid">Verificar</button>
+  <button type="button" (click)="Reiniciar()">Intentar Otra Palabra</button>
 </form>
-<div>{{ Mensajes }}</div>
+<h1>{{ Mensaje }}</h1>

@@ -1,0 +1,3 @@
+<button *ngIf="!tomado" (click)="onClick()">ELEGIR</button>
+<span *ngIf="tomado && deUsuario" >X</span>
+<span *ngIf="tomado && !deUsuario" >O</span>
