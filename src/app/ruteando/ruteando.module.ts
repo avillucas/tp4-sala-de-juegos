@@ -37,12 +37,12 @@ const MiRuteo = [
   {
     path: 'Juegos',
     component: JuegosComponent,
-    children:[
+    children: [
       { path: '', component: MenuCardComponent },
       { path: 'Adivina', component: AdivinaElNumeroComponent },
+      { path: 'Agilidad', component: AgilidadAritmeticaComponent },
       { path: 'AdivinaMasListado', component: AdivinaMasListadoComponent },
       { path: 'AgilidadaMasListado', component: AgilidadMasListadoComponent },
-      { path: 'Agilidad', component: AgilidadAritmeticaComponent }
     ]
   },
   { path: '**', component: ErrorComponent },
