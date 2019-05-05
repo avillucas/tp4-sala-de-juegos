@@ -2,16 +2,28 @@ import { Juego } from './juego';
 
 export class JuegoAnagrama extends Juego {
 
-  private palabras = ['casa', 'cocina', 'topo', 'armando'];
+  // @todo Analizar como traer el diccionario desde algun json o similar
+  // @todo evitar que salga dos veces la misma palabra
+  private palabras = ['casa', 'cocina', 'topo', 'armando', 'tijeras', 'herramienta', 'pachanga'];
   private palabraDesordenada: string;
   private palabraOrdenada: string;
   private palabraIngresada: string;
 
+  get PalabraDesordenada(): string {
+    return this.palabraDesordenada;
+  }
+
+  set PalabraIngresada(palabraIngresada: string) {
+    this.palabraIngresada = palabraIngresada;
+  }
+
   private desordenarPalabra(palabraOrdenada: string): string {
-    if (!palabraOrdenada) {
-      return '';
+    let palabraDesordenada = palabraOrdenada.split('').sort(this.randomize).join('');
+    // evitar el caso en el que se repitan
+    if (palabraDesordenada === palabraOrdenada) {
+      palabraDesordenada = this.desordenarPalabra(palabraDesordenada);
     }
-    return palabraOrdenada.split('').sort(this.randomize).join('');
+    return palabraDesordenada;
   }
 
   private randomize(a, b) {
@@ -24,20 +36,27 @@ export class JuegoAnagrama extends Juego {
     return this.palabras[indice];
   }
 
-  public generarPalabraDesordenada() {
+  private generarPalabraDesordenada() {
     this.palabraOrdenada = this.traerPalabraAlAzar();
+    console.info('Palabra ordenada:' + this.palabraOrdenada);
     this.palabraDesordenada = this.desordenarPalabra(this.palabraOrdenada);
-    console.info('Palabra ordenada:' + this.palabraDesordenada);
+    console.info('Palabra desordenada:' + this.palabraDesordenada);
     this.gano = false;
   }
 
   constructor(nombre?: string, gano?: boolean, jugador?: string) {
     super('Anagrama', gano, jugador);
-    this.resetear();
   }
 
-  public finalizado()
-  {
+  public iniciar() {
+    this.resetear();
+    this.generarPalabraDesordenada();
+  }
+  public reiniciar() {
+    this.resetear();
+    this.generarPalabraDesordenada();
+  }
+  public finalizar() {
     this.resetear();
   }
 
@@ -46,11 +65,9 @@ export class JuegoAnagrama extends Juego {
     this.palabraIngresada = '';
     this.palabraOrdenada = '';
   }
-  set PalabraIngresada(palabraIngresada: string) {
-    this.palabraIngresada = palabraIngresada;
-  }
 
   public verificar(): boolean {
+    console.info('Verificacion:', this.palabraIngresada, this.palabraOrdenada);
     if (this.palabraIngresada === this.palabraOrdenada) {
       this.gano = true;
     }

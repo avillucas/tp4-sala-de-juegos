@@ -2,10 +2,16 @@
   <h1>{{ nuevoJuego.nombre }}!</h1>
 </div>
 
-<h3>La palabra a adivinar es :</h3>
+<h3>Las letras desordenadas de la palabra son :</h3>
 <h1>{{ palabraDesordenada }}</h1>
 <form [formGroup]="anagramaForm"  (ngSubmit)="Verificar()" >
-  <input [(ngModel)]="nuevoJuego.palabraOrdenada" placeholder="Ingrese la palabra ordenada"   name="palabraOrdenada"  type="text" class="form-control"  />
-  <button type="submit" class="signupbtn" [disabled]="!anagramaForm.valid">Verificar</button>
+  <input
+  placeholder="Ingresá la palabra ordenada"
+  name="palabraOrdenada"
+  type="text"
+   class="form-control"
+   [formControl]="palabraOrdenadaControl"
+   />
+  <button type="submit"  [disabled]="!anagramaForm.valid">Verificar</button>
 </form>
 <div>{{ Mensajes }}</div>

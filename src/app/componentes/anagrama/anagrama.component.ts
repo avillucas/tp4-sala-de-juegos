@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { JuegoAnagrama } from '../../clases/juego-anagrama';
-import { Validators, FormBuilder, FormControl, FormGroup } from "@angular/forms";
+import { Validators, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-anagrama',
@@ -13,27 +13,30 @@ export class AnagramaComponent implements OnInit {
   nuevoJuego: JuegoAnagrama;
   Mensajes: string;
   contador: number;
+  palabraDesordenada: string;
 
   constructor(private builder: FormBuilder) {
+    console.info('Anagrama iniciando');
     this.nuevoJuego = new JuegoAnagrama();
   }
 
-  palabraOrdenada = new FormControl('', [
+  palabraOrdenadaControl = new FormControl('', [
     Validators.required,
-    Validators.minLength(5),
-    Validators.maxLength(255)
+    Validators.minLength(1),
+    Validators.maxLength(30)
   ]);
 
   anagramaForm: FormGroup = this.builder.group({
-    palabraOrdenada: this.palabraOrdenada
+    palabraOrdenada: this.palabraOrdenadaControl
   });
 
   Verificar() {
+    console.info('verificando');
     this.nuevoJuego.PalabraIngresada = this.anagramaForm.get('palabraOrdenada').value;
     if (this.nuevoJuego.verificar()) {
       this.enviarJuego.emit(this.nuevoJuego);
-      //this.MostarMensaje('Sos un Genio!!!', true);
-      this.nuevoJuego.finalizado();
+      // this.MostarMensaje('Sos un Genio!!!', true);
+      this.reiniciar();
       console.info('Gano');
     } else {
       console.info('Perdio');
@@ -41,7 +44,13 @@ export class AnagramaComponent implements OnInit {
     }
   }
 
+  private reiniciar() {
+    this.nuevoJuego.reiniciar();
+    this.palabraDesordenada = this.nuevoJuego.PalabraDesordenada;
+  }
   ngOnInit() {
+    this.nuevoJuego.iniciar();
+    this.palabraDesordenada = this.nuevoJuego.PalabraDesordenada;
   }
 
 }

@@ -69,6 +69,7 @@ import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/pi
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RuteandoModule,
     HttpModule,
     AgmCoreModule.forRoot({    apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'   })
