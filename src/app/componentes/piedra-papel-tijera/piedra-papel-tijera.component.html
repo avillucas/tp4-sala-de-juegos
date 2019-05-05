@@ -1,3 +1,10 @@
-<p>
-  piedra-papel-tijera works!
-</p>
+<div style="text-align:center">
+  <h1>{{ nuevoJuego.nombre }}!</h1>
+</div>
+<form name="juegoppt">
+  <label>Elija una opción: </label>
+  <button  *ngIf="permitidoJugar"  (click)="JugarPiedra()" class="btn btn-info btn-lg" >PIEDRA</button>
+  <button  *ngIf="permitidoJugar"  (click)="JugarPapel()"  class="btn btn-info btn-lg" >PAPEL</button>
+  <button  *ngIf="permitidoJugar"  (click)="JugarTijera()" class="btn btn-info btn-lg" >TIJERA</button>
+  <h1 *ngIf="Mensaje">{{ Mensaje }}!</h1>
+</form>
