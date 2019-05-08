@@ -1,57 +1,71 @@
-<!--div style="margin: 20% auto; width: 30%;">
-  <div class="row">
-    <div class="col-lg-6">
-      Usuario
-    </div>
-    <div class="col-lg-6">
-      <input type="text"  [(ngModel)]="usuario">
-    </div>
-  </div>
-  <div class="row" style="margin-top: 5px">
-    <div class="col-lg-6">
-      Clave
-    </div>
-    <div class="col-lg-6">
-      <input type="password" [(ngModel)]="clave">
-    </div>
-  </div>
-  <div class="row" style="text-align: center; margin-top: 10px">
-    <div class="col-lg-12">
-      <button (click)="Entrar()" class="btn btn-info btn-lg" >Entrar</button>
-    </div>
-  </div>
-</div-->
- <div class="container" >
-  <div class="jumbotron" style="padding:50px;">
-    <form action="return true;">
-      <div class="imgcontainer">
-        <img src="./assets/imagenes/login.png" alt="Avatar" class="avatar" max-width="104" >
-      </div>
+<div class="container">
 
-      <div class="container">
-        <label><b>Usuario</b></label>
-        <input type="text" placeholder="Usuario"  [(ngModel)]="usuario"  name="uname" required>
+  <!-- Outer Row -->
+  <div class="row justify-content-center">
 
-        <label><b>Clave</b></label>
-        <input type="password" placeholder="Clave"  [(ngModel)]="clave" name="psw" required>
-            
-        <button *ngIf="logeando"  (click)="MoverBarraDeProgreso()" >Ingresar</button>
-       
-        <div *ngIf="!logeando" class="progress">
-            <div class="progress-bar progress-bar-info progress-bar-striped active" [class]="clase" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" [style.width]="ProgresoDeAncho" >
-              {{progresoMensaje}} - {{progreso}}%
+    <div class="col-xl-10 col-lg-12 col-md-9">
+
+      <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+          <!-- Nested Row within Card Body -->
+          <div class="row">
+            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+            <div class="col-lg-6">
+              <div class="p-5">
+                <div class="text-center">
+                  <h1 class="h4 text-gray-900 mb-4">Binvenido!</h1>
+                </div>
+
+                <form action="return true;" class="user" >
+                  <div class="form-group">
+                    <input type="text"  [(ngModel)]="usuario" name="usuario"  class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Ingrese el usuario">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control form-control-user"  [(ngModel)]="password" name="password"   id="exampleInputPassword" placeholder="Password">
+                  </div>
+                  <!--
+                                      <div class="form-group">
+                    <div class="custom-control custom-checkbox small">
+                      <input type="checkbox" class="custom-control-input" id="customCheck">
+                      <label class="custom-control-label" for="customCheck">Recordarme</label>
+                    </div>
+                  </div>
+                -->
+                <div *ngIf="!logeando" class="progress">
+                  <div class="progress-bar progress-bar-info progress-bar-striped active" [class]="clase" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" [style.width]="ProgresoDeAncho" >
+                    {{progresoMensaje}} - {{progreso}}%
+                  </div>
+              </div>
+                  <a href="#" class="btn btn-primary btn-user btn-block"  (click)="MoverBarraDeProgreso()" >
+                    Ingresar
+                  </a>
+
+                  <hr>
+                  <!--
+                  <a href="index.html" class="btn btn-google btn-user btn-block">
+                    <i class="fab fa-google fa-fw"></i> Login with Google
+                  </a>
+                  <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                    <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+                  </a>
+                                    -->
+
+                </form>
+                <!--
+                <hr>
+                <div class="text-center">
+                  <a class="small" href="forgot-password.html">Forgot Password?</a>
+                </div>
+                -->
+                <div class="text-center">
+                  <a class="small"  routerLink="/Registro">Registro</a>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-       
-        <input type="checkbox" checked="checked"> Recordar mis datos
       </div>
 
-      <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancelar</button>
-        <button type="button" class="aceptbtn" routerLink="/Registro" >Registrarse</button>
-        <span class="psw">Te olvidaste <a href="#">la clave?</a></span>
-      </div>
-     
-    </form>
+    </div>
+
   </div>
-</div>

@@ -9,14 +9,20 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class RegistroComponent implements OnInit {
 
- /* constructor( private miConstructor:FormBuilder) { }
-  email=new FormControl('',[Validators.email]);
-  formRegistro:FormGroup=this.miConstructor.group({
-    usuario:this.email
-  });*/
-  constructor( ) { }
+  email: string
+  password: string;
+  passwordConfirmacion: string;
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  Registrar() {
+    // TODO llamar al servicio loguear etc
+    //TODO validar el formulario etc
+    this.router.navigate(['/Principal']);
+
   }
 
 }

@@ -32,12 +32,15 @@ import { QuienSoyComponent } from './componentes/quien-soy/quien-soy.component';
 import { AnagramaComponent } from './componentes/anagrama/anagrama.component';
 import { ListadoDePaisesComponent } from './componentes/listado-de-paises/listado-de-paises.component';
 import { MapaDeGoogleComponent } from './componentes/mapa-de-google/mapa-de-google.component'
-import { AgmCoreModule } from '@agm/core';
+//import { AgmCoreModule } from '@agm/core';
 import { InputJugadoresComponent } from './componentes/input-jugadores/input-jugadores.component';
 import { SexoPipe } from './pipes/sexo.pipe';
 import { TatetiComponent } from './componentes/tateti/tateti.component';
 import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
 import { TatetiCasilleroComponent } from './componentes/tateti-casillero/tateti-casillero.component';
+import { OperadorPipe } from './pipes/operador.pipe';
+import { SimonComponent } from './componentes/simon/simon.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -66,15 +69,18 @@ import { TatetiCasilleroComponent } from './componentes/tateti-casillero/tateti-
     SexoPipe,
     TatetiComponent,
     PiedraPapelTijeraComponent,
-    TatetiCasilleroComponent
+    TatetiCasilleroComponent,
+    OperadorPipe,
+    SimonComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     RuteandoModule,
     HttpModule,
-    AgmCoreModule.forRoot({    apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'   })
+    //  AgmCoreModule.forRoot({    apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'   })
   ],
   providers: [JuegoServiceService, MiHttpService, PaisesService, ArchivosJugadoresService, JugadoresService],
   bootstrap: [AppComponent]

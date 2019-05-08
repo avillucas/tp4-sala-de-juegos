@@ -5,4 +5,14 @@
 
 export const environment = {
   production: false
+
+};
+
+export const agilidadConfig = {
+  min: 1,
+  max: 500
+};
+
+export const apiConfig = {
+  host: 'http://localhost:8080/'
 };
