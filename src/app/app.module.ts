@@ -41,6 +41,12 @@ import { TatetiCasilleroComponent } from './componentes/tateti-casillero/tateti-
 import { OperadorPipe } from './pipes/operador.pipe';
 import { SimonComponent } from './componentes/simon/simon.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './componentes/header/header.component';
+import { FooterComponent } from './componentes/footer/footer.component';
+import { NavComponent } from './componentes/nav/nav.component';
+import { SidebarComponent } from './componentes/sidebar/sidebar.component';
+import { LogoutComponent } from './componentes/logout/logout.component';
+
 
 @NgModule({
   declarations: [
@@ -71,7 +77,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PiedraPapelTijeraComponent,
     TatetiCasilleroComponent,
     OperadorPipe,
-    SimonComponent
+    SimonComponent,
+    HeaderComponent,
+    FooterComponent,
+    NavComponent,
+    SidebarComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

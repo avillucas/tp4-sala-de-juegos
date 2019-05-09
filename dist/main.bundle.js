@@ -112,6 +112,11 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__pipes_operador_pipe__ = __webpack_require__("../../../../../src/app/pipes/operador.pipe.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__componentes_simon_simon_component__ = __webpack_require__("../../../../../src/app/componentes/simon/simon.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/@angular/platform-browser/animations.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__componentes_header_header_component__ = __webpack_require__("../../../../../src/app/componentes/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__componentes_footer_footer_component__ = __webpack_require__("../../../../../src/app/componentes/footer/footer.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__componentes_nav_nav_component__ = __webpack_require__("../../../../../src/app/componentes/nav/nav.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__componentes_sidebar_sidebar_component__ = __webpack_require__("../../../../../src/app/componentes/sidebar/sidebar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__componentes_logout_logout_component__ = __webpack_require__("../../../../../src/app/componentes/logout/logout.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -161,6 +166,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -196,7 +206,12 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_34__componentes_piedra_papel_tijera_piedra_papel_tijera_component__["a" /* PiedraPapelTijeraComponent */],
             __WEBPACK_IMPORTED_MODULE_35__componentes_tateti_casillero_tateti_casillero_component__["a" /* TatetiCasilleroComponent */],
             __WEBPACK_IMPORTED_MODULE_36__pipes_operador_pipe__["a" /* OperadorPipe */],
-            __WEBPACK_IMPORTED_MODULE_37__componentes_simon_simon_component__["a" /* SimonComponent */]
+            __WEBPACK_IMPORTED_MODULE_37__componentes_simon_simon_component__["a" /* SimonComponent */],
+            __WEBPACK_IMPORTED_MODULE_39__componentes_header_header_component__["a" /* HeaderComponent */],
+            __WEBPACK_IMPORTED_MODULE_40__componentes_footer_footer_component__["a" /* FooterComponent */],
+            __WEBPACK_IMPORTED_MODULE_41__componentes_nav_nav_component__["a" /* NavComponent */],
+            __WEBPACK_IMPORTED_MODULE_42__componentes_sidebar_sidebar_component__["a" /* SidebarComponent */],
+            __WEBPACK_IMPORTED_MODULE_43__componentes_logout_logout_component__["a" /* LogoutComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -1345,6 +1360,128 @@ ErrorComponent = __decorate([
 
 /***/ }),
 
+/***/ "../../../../../src/app/componentes/footer/footer.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/footer/footer.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  footer works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/footer/footer.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FooterComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var FooterComponent = (function () {
+    function FooterComponent() {
+    }
+    FooterComponent.prototype.ngOnInit = function () {
+    };
+    return FooterComponent;
+}());
+FooterComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-footer',
+        template: __webpack_require__("../../../../../src/app/componentes/footer/footer.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/componentes/footer/footer.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], FooterComponent);
+
+//# sourceMappingURL=footer.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/header/header.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/header/header.component.html":
+/***/ (function(module, exports) {
+
+module.exports = " <!-- Topbar -->\n <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\n\n    <!-- Sidebar Toggle (Topbar) -->\n    <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\n      <i class=\"fa fa-bars\"></i>\n    </button>\n\n    <!-- Topbar Search -->\n    <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 \">\n      <!--<h2></h2> -->\n    </div>\n\n    <!-- Topbar Navbar -->\n    <ul class=\"navbar-nav ml-auto\">\n\n\n      <div class=\"topbar-divider d-none d-sm-block\"></div>\n\n      <!-- Nav Item - User Information -->\n      <li class=\"nav-item dropdown no-arrow\">\n        <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n          <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Nombre Apellido</span>\n          <img class=\"img-profile rounded-circle\" src=\"./assets/imagenes/profile-photo.jpg\">\n        </a>\n        <!-- Dropdown - User Information -->\n        <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\n          <div class=\"dropdown-divider\"></div>\n          <a class=\"dropdown-item\" href=\"#\" data-toggle=\"modal\" data-target=\"#logoutModal\">\n            <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i>\n            Salir\n          </a>\n        </div>\n      </li>\n\n    </ul>\n\n  </nav>\n  <!-- End of Topbar -->\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/header/header.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HeaderComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var HeaderComponent = (function () {
+    function HeaderComponent() {
+    }
+    HeaderComponent.prototype.ngOnInit = function () {
+    };
+    return HeaderComponent;
+}());
+HeaderComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-header',
+        template: __webpack_require__("../../../../../src/app/componentes/header/header.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/componentes/header/header.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], HeaderComponent);
+
+//# sourceMappingURL=header.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/componentes/input-jugadores/input-jugadores.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1947,6 +2084,67 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/componentes/logout/logout.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/logout/logout.component.html":
+/***/ (function(module, exports) {
+
+module.exports = " <!-- Scroll to Top Button-->\n <a class=\"scroll-to-top rounded\" href=\"#page-top\">\n    <i class=\"fas fa-angle-up\"></i>\n  </a>\n  <!-- Logout Modal-->\n  <div class=\"modal fade\" id=\"logoutModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n      <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n          <div class=\"modal-header\">\n            <h5 class=\"modal-title\" id=\"exampleModalLabel\">Seguro desea salir?</h5>\n            <button class=\"close\" type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\">\n              <span aria-hidden=\"true\">×</span>\n            </button>\n          </div>\n          <div class=\"modal-body\">Haga Click en salir si esta seguro que desea salir</div>\n          <div class=\"modal-footer\">\n            <button class=\"btn btn-secondary\" type=\"button\" data-dismiss=\"modal\">Cancel</button>\n            <!-- TODO -->\n            <a class=\"btn btn-primary\" href=\"login.html\">Salir</a>\n          </div>\n        </div>\n      </div>\n    </div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/logout/logout.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LogoutComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var LogoutComponent = (function () {
+    function LogoutComponent() {
+    }
+    LogoutComponent.prototype.ngOnInit = function () {
+    };
+    return LogoutComponent;
+}());
+LogoutComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-logout',
+        template: __webpack_require__("../../../../../src/app/componentes/logout/logout.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/componentes/logout/logout.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], LogoutComponent);
+
+//# sourceMappingURL=logout.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/componentes/mapa-de-google/mapa-de-google.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2195,6 +2393,67 @@ var _a, _b;
 
 /***/ }),
 
+/***/ "../../../../../src/app/componentes/nav/nav.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/nav/nav.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  nav works!\n</p>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/nav/nav.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var NavComponent = (function () {
+    function NavComponent() {
+    }
+    NavComponent.prototype.ngOnInit = function () {
+    };
+    return NavComponent;
+}());
+NavComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-nav',
+        template: __webpack_require__("../../../../../src/app/componentes/nav/nav.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/componentes/nav/nav.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], NavComponent);
+
+//# sourceMappingURL=nav.component.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/app/componentes/piedra-papel-tijera/piedra-papel-tijera.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2325,7 +2584,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/componentes/principal/principal.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-cabecera> </app-cabecera>\n<div class=\"container\">\n  <ul class=\"list-group\">\n    <li class=\"list-group-item list-group-item-danger\">\n      <div class=\"media-body\">\n        <div class=\"hero-text\">\n          <h4>Menú Principal</h4>\n        </div>\n      </div>\n    </li>\n    <li class=\"list-group-item list-group-item-success\">\n      <a routerLink=\"/Juegos\">\n        <div class=\"media\">\n          <div class=\"media-left\">\n            <img\n              src=\"./assets/imagenes/saladejuegos.png\"\n              class=\"media-object imagenDeMenu\"\n            />\n          </div>\n          <div class=\"media-body\">\n            <h4 class=\"media-heading\">Juegos</h4>\n            <p>\n              El método lúdico es un conjunto de estrategias diseñadas para\n              crear un ambiente de armonía en los estudiantes que están inmersos\n              en el proceso de aprendizaje. Este método busca que los alumnos se\n              apropien de los temas impartidos por los docentes utilizando el\n              juego.\n            </p>\n          </div>\n        </div>\n      </a>\n    </li>\n    <li class=\"list-group-item list-group-item-info\">\n      <a routerLink=\"/Listado\">\n        <div class=\"media\">\n          <div class=\"media-left\">\n            <img\n              src=\"./assets/imagenes/listado.jpg\"\n              class=\"media-object imagenDeMenu\"\n            />\n          </div>\n          <div class=\"media-body\">\n            <h4 class=\"media-heading\">Listados de resultados</h4>\n            <p>Los listados de los resultados con ordenamiento y busqueda</p>\n          </div>\n        </div>\n      </a>\n    </li>\n    <li class=\"list-group-item list-group-item-warning\">\n      <a routerLink=\"/Juegos\">\n        <div class=\"media\">\n          <div class=\"media-left\">\n            <img\n              src=\"./assets/imagenes/Configuracion.png\"\n              class=\"media-object imagenDeMenu\"\n            />\n          </div>\n          <div class=\"media-body\">\n            <h4 class=\"media-heading\">Configuraci&oacute;n</h4>\n            <p>Ajustes de la aplicacion y los métodos de autentificación</p>\n          </div>\n        </div>\n      </a>\n    </li>\n    <li class=\"list-group-item list-group-item-warning\">\n      <a routerLink=\"/Jugadores\">\n        <div class=\"media\">\n          <div class=\"media-left\">\n            <img\n              src=\"./assets/imagenes/jugadores.png\"\n              class=\"media-object imagenDeMenu\"\n            />\n          </div>\n          <div class=\"media-body\">\n            <h4 class=\"media-heading\">Jugadores</h4>\n            <p>Listado de jugadores</p>\n          </div>\n        </div>\n      </a>\n    </li>\n  </ul>\n</div>\n"
+module.exports = "<!-- Page Wrapper -->\n<div id=\"wrapper\">\n  <app-sidebar></app-sidebar>\n\n  <!-- Content Wrapper -->\n  <div id=\"content-wrapper\" class=\"d-flex flex-column\">\n    <!-- Main Content -->\n    <div id=\"content\">\n      <app-header></app-header>\n\n      <div class=\"container-fluid\">\n        <!-- Page Heading -->\n        <div class=\"row\">\n          <div class=\"col-lg-6\">\n            <!-- Basic Card  -->\n            <div class=\"card shadow mb-4\">\n              <div class=\"card-header py-3\">\n                <h6 class=\"m-0 font-weight-bold text-primary\">Juegos</h6>\n              </div>\n              <div class=\"card-body\">\n                El método lúdico es un conjunto de estrategias diseñadas para\n                crear un ambiente de armonía en los estudiantes que están\n                inmersos en el proceso de aprendizaje. Este método busca que los\n                alumnos se apropien de los temas impartidos por los docentes\n                utilizando el juego.\n              </div>\n            </div>\n            <!-- Basic Card  -->\n            <div class=\"card shadow mb-4\">\n              <div class=\"card-header py-3\">\n                <h6 class=\"m-0 font-weight-bold text-primary\">\n                  Listados de resultados\n                </h6>\n              </div>\n              <div class=\"card-body\">\n                Los listados de los resultados con ordenamiento y busqueda.\n                <button\n                  type=\"button\"\n                  class=\"btn btn-primary\"\n                  routerLink=\"/Listado\"\n                >\n                  Ingresar\n                </button>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-lg-6\">\n            <!-- Basic Card  -->\n            <div class=\"card shadow mb-4\">\n              <div class=\"card-header py-3\">\n                <h6 class=\"m-0 font-weight-bold text-primary\">Configuración</h6>\n              </div>\n              <div class=\"card-body\">\n                Ajustes de la aplicacion y los métodos de autentificación.\n                <button\n                  type=\"button\"\n                  class=\"btn btn-primary\"\n                  routerLink=\"/Configuracion\"\n                >\n                  Ingresar\n                </button>\n              </div>\n            </div>\n            <!-- Basic Card  -->\n            <div class=\"card shadow mb-4\">\n              <div class=\"card-header py-3\">\n                <h6 class=\"m-0 font-weight-bold text-primary\">Jugadores</h6>\n              </div>\n              <div class=\"card-body\">\n                Listado de jugadores\n                <button\n                  type=\"button\"\n                  class=\"btn btn-primary\"\n                  routerLink=\"/Jugadores\"\n                >\n                  Ingresar\n                </button>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <!-- /.container-fluid -->\n    </div>\n    <!-- End of Main Content -->\n  </div>\n  <!-- End of Page Wrapper -->\n\n  <app-logout></app-logout>\n</div>\n"
 
 /***/ }),
 
@@ -2390,7 +2649,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/componentes/quien-soy/quien-soy.component.html":
 /***/ (function(module, exports) {
 
-module.exports = " <!-- Page Wrapper -->\n <div id=\"wrapper\">\n\n    <!-- Sidebar -->\n    <ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\n\n      <!-- Sidebar - Brand -->\n      <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" href=\"index.html\">\n        <div class=\"sidebar-brand-icon rotate-n-15\">\n          <i class=\"fas fa-laugh-wink\"></i>\n        </div>\n        <div class=\"sidebar-brand-text mx-3\">SB Admin <sup>2</sup></div>\n      </a>\n\n      <!-- Divider -->\n      <hr class=\"sidebar-divider my-0\">\n\n      <!-- Nav Item - Dashboard -->\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" href=\"index.html\">\n          <i class=\"fas fa-fw fa-tachometer-alt\"></i>\n          <span>Dashboard</span></a>\n      </li>\n\n      <!-- Divider -->\n      <hr class=\"sidebar-divider\">\n\n      <!-- Heading -->\n      <div class=\"sidebar-heading\">\n        Interface\n      </div>\n\n      <!-- Nav Item - Pages Collapse Menu -->\n      <li class=\"nav-item\">\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseTwo\" aria-expanded=\"true\" aria-controls=\"collapseTwo\">\n          <i class=\"fas fa-fw fa-cog\"></i>\n          <span>Components</span>\n        </a>\n        <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">\n          <div class=\"bg-white py-2 collapse-inner rounded\">\n            <h6 class=\"collapse-header\">Custom Components:</h6>\n            <a class=\"collapse-item\" href=\"buttons.html\">Buttons</a>\n            <a class=\"collapse-item\" href=\"cards.html\">Cards</a>\n          </div>\n        </div>\n      </li>\n\n      <!-- Nav Item - Utilities Collapse Menu -->\n      <li class=\"nav-item\">\n        <a class=\"nav-link collapsed\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapseUtilities\" aria-expanded=\"true\" aria-controls=\"collapseUtilities\">\n          <i class=\"fas fa-fw fa-wrench\"></i>\n          <span>Utilities</span>\n        </a>\n        <div id=\"collapseUtilities\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">\n          <div class=\"bg-white py-2 collapse-inner rounded\">\n            <h6 class=\"collapse-header\">Custom Utilities:</h6>\n            <a class=\"collapse-item\" href=\"utilities-color.html\">Colors</a>\n            <a class=\"collapse-item\" href=\"utilities-border.html\">Borders</a>\n            <a class=\"collapse-item\" href=\"utilities-animation.html\">Animations</a>\n            <a class=\"collapse-item\" href=\"utilities-other.html\">Other</a>\n          </div>\n        </div>\n      </li>\n\n      <!-- Divider -->\n      <hr class=\"sidebar-divider\">\n\n      <!-- Heading -->\n      <div class=\"sidebar-heading\">\n        Addons\n      </div>\n\n      <!-- Nav Item - Pages Collapse Menu -->\n      <li class=\"nav-item active\">\n        <a class=\"nav-link\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapsePages\" aria-expanded=\"true\" aria-controls=\"collapsePages\">\n          <i class=\"fas fa-fw fa-folder\"></i>\n          <span>Pages</span>\n        </a>\n        <div id=\"collapsePages\" class=\"collapse show\" aria-labelledby=\"headingPages\" data-parent=\"#accordionSidebar\">\n          <div class=\"bg-white py-2 collapse-inner rounded\">\n            <h6 class=\"collapse-header\">Login Screens:</h6>\n            <a class=\"collapse-item\" href=\"login.html\">Login</a>\n            <a class=\"collapse-item\" href=\"register.html\">Register</a>\n            <a class=\"collapse-item\" href=\"forgot-password.html\">Forgot Password</a>\n            <div class=\"collapse-divider\"></div>\n            <h6 class=\"collapse-header\">Other Pages:</h6>\n            <a class=\"collapse-item\" href=\"404.html\">404 Page</a>\n            <a class=\"collapse-item active\" href=\"blank.html\">Blank Page</a>\n          </div>\n        </div>\n      </li>\n\n      <!-- Nav Item - Charts -->\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" href=\"charts.html\">\n          <i class=\"fas fa-fw fa-chart-area\"></i>\n          <span>Charts</span></a>\n      </li>\n\n      <!-- Nav Item - Tables -->\n      <li class=\"nav-item\">\n        <a class=\"nav-link\" href=\"tables.html\">\n          <i class=\"fas fa-fw fa-table\"></i>\n          <span>Tables</span></a>\n      </li>\n\n      <!-- Divider -->\n      <hr class=\"sidebar-divider d-none d-md-block\">\n\n      <!-- Sidebar Toggler (Sidebar) -->\n      <div class=\"text-center d-none d-md-inline\">\n        <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\n      </div>\n\n    </ul>\n    <!-- End of Sidebar -->\n\n    <!-- Content Wrapper -->\n    <div id=\"content-wrapper\" class=\"d-flex flex-column\">\n\n      <!-- Main Content -->\n      <div id=\"content\">\n\n        <!-- Topbar -->\n        <nav class=\"navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow\">\n\n          <!-- Sidebar Toggle (Topbar) -->\n          <button id=\"sidebarToggleTop\" class=\"btn btn-link d-md-none rounded-circle mr-3\">\n            <i class=\"fa fa-bars\"></i>\n          </button>\n\n          <!-- Topbar Search -->\n          <div class=\"d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 \">\n            <h2>Sala de Juegos</h2>\n          </div>\n\n          <!-- Topbar Navbar -->\n          <ul class=\"navbar-nav ml-auto\">\n\n            <!-- Nav Item - Alerts -->\n            <li class=\"nav-item dropdown no-arrow mx-1\">\n              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"alertsDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                <i class=\"fas fa-bell fa-fw\"></i>\n                <!-- Counter - Alerts -->\n                <span class=\"badge badge-danger badge-counter\">3+</span>\n              </a>\n              <!-- Dropdown - Alerts -->\n              <div class=\"dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"alertsDropdown\">\n                <h6 class=\"dropdown-header\">\n                  Alerts Center\n                </h6>\n                <a class=\"dropdown-item d-flex align-items-center\" href=\"#\">\n                  <div class=\"mr-3\">\n                    <div class=\"icon-circle bg-primary\">\n                      <i class=\"fas fa-file-alt text-white\"></i>\n                    </div>\n                  </div>\n                  <div>\n                    <div class=\"small text-gray-500\">December 12, 2019</div>\n                    <span class=\"font-weight-bold\">A new monthly report is ready to download!</span>\n                  </div>\n                </a>\n                <a class=\"dropdown-item d-flex align-items-center\" href=\"#\">\n                  <div class=\"mr-3\">\n                    <div class=\"icon-circle bg-success\">\n                      <i class=\"fas fa-donate text-white\"></i>\n                    </div>\n                  </div>\n                  <div>\n                    <div class=\"small text-gray-500\">December 7, 2019</div>\n                    $290.29 has been deposited into your account!\n                  </div>\n                </a>\n                <a class=\"dropdown-item d-flex align-items-center\" href=\"#\">\n                  <div class=\"mr-3\">\n                    <div class=\"icon-circle bg-warning\">\n                      <i class=\"fas fa-exclamation-triangle text-white\"></i>\n                    </div>\n                  </div>\n                  <div>\n                    <div class=\"small text-gray-500\">December 2, 2019</div>\n                    Spending Alert: We've noticed unusually high spending for your account.\n                  </div>\n                </a>\n                <a class=\"dropdown-item text-center small text-gray-500\" href=\"#\">Show All Alerts</a>\n              </div>\n            </li>\n\n            <!-- Nav Item - Messages -->\n            <li class=\"nav-item dropdown no-arrow mx-1\">\n              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"messagesDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                <i class=\"fas fa-envelope fa-fw\"></i>\n                <!-- Counter - Messages -->\n                <span class=\"badge badge-danger badge-counter\">7</span>\n              </a>\n              <!-- Dropdown - Messages -->\n              <div class=\"dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"messagesDropdown\">\n                <h6 class=\"dropdown-header\">\n                  Message Center\n                </h6>\n                <a class=\"dropdown-item d-flex align-items-center\" href=\"#\">\n                  <div class=\"dropdown-list-image mr-3\">\n                    <img class=\"rounded-circle\" src=\"https://source.unsplash.com/fn_BT9fwg_E/60x60\" alt=\"\">\n                    <div class=\"status-indicator bg-success\"></div>\n                  </div>\n                  <div class=\"font-weight-bold\">\n                    <div class=\"text-truncate\">Hi there! I am wondering if you can help me with a problem I've been having.</div>\n                    <div class=\"small text-gray-500\">Emily Fowler · 58m</div>\n                  </div>\n                </a>\n                <a class=\"dropdown-item d-flex align-items-center\" href=\"#\">\n                  <div class=\"dropdown-list-image mr-3\">\n                    <img class=\"rounded-circle\" src=\"https://source.unsplash.com/AU4VPcFN4LE/60x60\" alt=\"\">\n                    <div class=\"status-indicator\"></div>\n                  </div>\n                  <div>\n                    <div class=\"text-truncate\">I have the photos that you ordered last month, how would you like them sent to you?</div>\n                    <div class=\"small text-gray-500\">Jae Chun · 1d</div>\n                  </div>\n                </a>\n                <a class=\"dropdown-item d-flex align-items-center\" href=\"#\">\n                  <div class=\"dropdown-list-image mr-3\">\n                    <img class=\"rounded-circle\" src=\"https://source.unsplash.com/CS2uCrpNzJY/60x60\" alt=\"\">\n                    <div class=\"status-indicator bg-warning\"></div>\n                  </div>\n                  <div>\n                    <div class=\"text-truncate\">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>\n                    <div class=\"small text-gray-500\">Morgan Alvarez · 2d</div>\n                  </div>\n                </a>\n                <a class=\"dropdown-item d-flex align-items-center\" href=\"#\">\n                  <div class=\"dropdown-list-image mr-3\">\n                    <img class=\"rounded-circle\" src=\"https://source.unsplash.com/Mv9hjnEUHR4/60x60\" alt=\"\">\n                    <div class=\"status-indicator bg-success\"></div>\n                  </div>\n                  <div>\n                    <div class=\"text-truncate\">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>\n                    <div class=\"small text-gray-500\">Chicken the Dog · 2w</div>\n                  </div>\n                </a>\n                <a class=\"dropdown-item text-center small text-gray-500\" href=\"#\">Read More Messages</a>\n              </div>\n            </li>\n\n            <div class=\"topbar-divider d-none d-sm-block\"></div>\n\n            <!-- Nav Item - User Information -->\n            <li class=\"nav-item dropdown no-arrow\">\n              <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Valerie Luna</span>\n                <img class=\"img-profile rounded-circle\" src=\"https://source.unsplash.com/QAB-WJcbgJk/60x60\">\n              </a>\n              <!-- Dropdown - User Information -->\n              <div class=\"dropdown-menu dropdown-menu-right shadow animated--grow-in\" aria-labelledby=\"userDropdown\">\n                <a class=\"dropdown-item\" href=\"#\">\n                  <i class=\"fas fa-user fa-sm fa-fw mr-2 text-gray-400\"></i>\n                  Profile\n                </a>\n                <a class=\"dropdown-item\" href=\"#\">\n                  <i class=\"fas fa-cogs fa-sm fa-fw mr-2 text-gray-400\"></i>\n                  Settings\n                </a>\n                <a class=\"dropdown-item\" href=\"#\">\n                  <i class=\"fas fa-list fa-sm fa-fw mr-2 text-gray-400\"></i>\n                  Activity Log\n                </a>\n                <div class=\"dropdown-divider\"></div>\n                <a class=\"dropdown-item\" href=\"#\" data-toggle=\"modal\" data-target=\"#logoutModal\">\n                  <i class=\"fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400\"></i>\n                  Logout\n                </a>\n              </div>\n            </li>\n\n          </ul>\n\n        </nav>\n        <!-- End of Topbar -->\n\n        <!-- Begin Page Content -->\n        <div class=\"container-fluid\">\n\n          <!-- Page Heading -->\n          <h1 class=\"h3 mb-4 text-gray-800\">Blank Page</h1>\n\n        </div>\n        <!-- /.container-fluid -->\n\n      </div>\n      <!-- End of Main Content -->\n\n      <!-- Footer -->\n      <footer class=\"sticky-footer bg-white\">\n        <div class=\"container my-auto\">\n          <div class=\"copyright text-center my-auto\">\n            <span>Copyright &copy; Your Website 2019</span>\n          </div>\n        </div>\n      </footer>\n      <!-- End of Footer -->\n\n    </div>\n    <!-- End of Content Wrapper -->\n\n  </div>\n  <!-- End of Page Wrapper -->\n\n  <!-- Scroll to Top Button-->\n  <a class=\"scroll-to-top rounded\" href=\"#page-top\">\n    <i class=\"fas fa-angle-up\"></i>\n  </a>\n\n  <!-- Logout Modal-->\n  <div class=\"modal fade\" id=\"logoutModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n      <div class=\"modal-content\">\n        <div class=\"modal-header\">\n          <h5 class=\"modal-title\" id=\"exampleModalLabel\">Ready to Leave?</h5>\n          <button class=\"close\" type=\"button\" data-dismiss=\"modal\" aria-label=\"Close\">\n            <span aria-hidden=\"true\">×</span>\n          </button>\n        </div>\n        <div class=\"modal-body\">Select \"Logout\" below if you are ready to end your current session.</div>\n        <div class=\"modal-footer\">\n          <button class=\"btn btn-secondary\" type=\"button\" data-dismiss=\"modal\">Cancel</button>\n          <a class=\"btn btn-primary\" href=\"login.html\">Logout</a>\n        </div>\n      </div>\n    </div>\n  </div>\n"
+module.exports = " <!-- Page Wrapper -->\n <div id=\"wrapper\">\n\n    <app-sidebar></app-sidebar>\n\n    <!-- Content Wrapper -->\n    <div id=\"content-wrapper\" class=\"d-flex flex-column\">\n\n      <!-- Main Content -->\n      <div id=\"content\">\n\n        <app-header></app-header>\n\n        <div class=\"container-fluid\">\n          <!-- Page Heading -->\n          <div class=\"row\">\n            <!-- First Container -->\n            <div id=\"quiwn\" class=\"container-fluid bg-1 text-center\">\n                <h3 class=\"margin\">Quién Soy?</h3>\n                <img\n                  src=\"./assets/imagenes/quien-soy-dukula.jpg\"\n                  class=\"img-responsive img-circle margin\"\n                  style=\"display:inline\"\n                  alt=\"Duckula\"\n                  width=\"350\"\n                  height=\"350\"\n                />\n                <h3>Soy Un alumno de la UTN FRA</h3>\n              </div>\n\n              <!-- Second Container -->\n              <div id=\"que\" class=\"container-fluid bg-2 text-center\">\n                <h3 class=\"margin\">Esto es un trabajo práctico</h3>\n                <p>\n                  Cada universidad, cada facultad, cada carrera y obviamente cada materia en\n                  particular tiene estrategias didácticas y formas de evaluación diferentes. A\n                  pesar de que en muchos casos las universidades intentan estandarizar la\n                  forma de dictar clase para generar un orden en las planificaciones\n                  cuatrimestre a cuatrimestre, las formas de evaluación son elementales tanto\n                  para las instituciones y profesores como para los alumnos. A través de la\n                  evaluación formativa el educador busca información en el alumno para lograr\n                  comprender cómo se está produciendo el proceso de aprendizaje y poder\n                  reajustar los objetivos pedagógicos. Y para el alumno es una muestra del\n                  progreso que está logrando y si puede aplicar, materializar y darle\n                  visibilidad a la comprensión del tema. Según Black y William (1998), la\n                  evaluación formativa, ayuda a que los estudiantes sean independientes a la\n                  hora del aprendizaje, es decir, se presenta como receptor, autorregulador y\n                  centro de esa misma evaluación.\n                </p>\n                <a href=\"#\" class=\"btn btn-default btn-lg\">\n                  <span class=\"glyphicon glyphicon-file\"></span> Descargar PDF\n                </a>\n              </div>\n\n              <!-- Third Container (Grid) -->\n              <div id=\"donde\" class=\"container-fluid bg-3 text-center\">\n                <h3 class=\"margin\">Dónde Funciona?</h3>\n                <br />\n                <div class=\"row\">\n                  <div class=\"col-sm-4\">\n                    <p>\n                      Con las tecnologias WEB que permiten desarrollar aplicaciones\n                      multiplataforma\n                    </p>\n\n                  </div>\n                  <div class=\"col-sm-4\">\n                    <p>\n                      Principalmente orientada a la experiencia del usuario, garantizando que\n                      su funcionamieto sea fluido y pensado en el comportamiento del usuario y\n                      en la funcionalidad.\n                    </p>\n\n                  </div>\n                  <div class=\"col-sm-4\">\n                    <p>\n                      Para los sistemas operativos lideres en el mercado del consumo masivo\n                    </p>\n\n                  </div>\n                </div>\n              </div>\n\n          </div>\n\n        </div>\n        <!-- /.container-fluid -->\n\n      </div>\n      <!-- End of Main Content -->\n\n  </div>\n  <!-- End of Page Wrapper -->\n\n  <app-logout></app-logout>\n"
 
 /***/ }),
 
@@ -2499,6 +2758,67 @@ RegistroComponent = __decorate([
 
 var _a;
 //# sourceMappingURL=registro.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/sidebar/sidebar.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/sidebar/sidebar.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- Sidebar -->\n<ul class=\"navbar-nav bg-gradient-primary sidebar sidebar-dark accordion\" id=\"accordionSidebar\">\n\n  <!-- Sidebar - Brand -->\n  <a class=\"sidebar-brand d-flex align-items-center justify-content-center\" href=\"index.html\">\n    <div class=\"sidebar-brand-icon rotate-n-15\">\n      <i class=\"fas fa-laugh-wink\"></i>\n    </div>\n    <div class=\"sidebar-brand-text mx-3\">Sala de Juegos</div>\n  </a>\n\n  <!-- Divider -->\n  <hr class=\"sidebar-divider my-0\">\n\n  <!-- Nav Item - Dashboard -->\n  <li class=\"nav-item\">\n    <a class=\"nav-link\" href=\"/Principal\">\n      <i class=\"fas fa-fw fa-tachometer-alt\"></i>\n      <span>Portada</span></a>\n  </li>\n\n  <!-- Divider -->\n  <hr class=\"sidebar-divider\">\n\n  <!-- Heading -->\n  <div class=\"sidebar-heading\">\n    Sala de Juegos\n  </div>\n  <!-- Nav Item - Pages Collapse Menu -->\n  <li class=\"nav-item \">\n    <a class=\"nav-link\" href=\"#\" data-toggle=\"collapse\" data-target=\"#collapsePages\"  aria-controls=\"collapsePages\">\n      <i class=\"fas fa-fw fa-folder\"></i>\n      <span>Juegos</span>\n    </a>\n    <div id=\"collapsePages\" class=\"collapse \" aria-labelledby=\"headingPages\" data-parent=\"#accordionSidebar\">\n      <div class=\"bg-white py-2 collapse-inner rounded\">\n          <a class=\"collapse-item\" (click)=\"Juego('Adivina')\">Adivina</a>\n          <a class=\"collapse-item\" (click)=\"Juego('Agilidad')\">Agilidad</a>\n          <a class=\"collapse-item\" (click)=\"Juego('Tateti')\">Ta Te Ti</a>\n          <a class=\"collapse-item\" (click)=\"Juego('PiedraPapelTijera')\">Piedra Papel o Tijera</a>\n          <a class=\"collapse-item\" (click)=\"Juego('Anagrama')\">Anagrama</a>\n          <a class=\"collapse-item\" (click)=\"Juego('Simon')\">Simon</a>\n      </div>\n    </div>\n  </li>\n  <li class=\"nav-item \">\n      <a class=\"nav-link\" href=\"/Listado\" data-toggle=\"collapse\" data-target=\"#collapsePages\" aria-expanded=\"true\" aria-controls=\"collapsePages\">\n        <i class=\"fas fa-fw fa-folder\"></i>\n        <span>Listados de resultados</span>\n      </a>\n  </li>\n  <li class=\"nav-item \">\n      <a class=\"nav-link\" href=\"/Configuracion\" data-toggle=\"collapse\" data-target=\"#collapsePages\" aria-expanded=\"true\" aria-controls=\"collapsePages\">\n\n        <span>Configuracion</span>\n      </a>\n  </li>\n\n\n  <!-- Divider -->\n  <hr class=\"sidebar-divider d-none d-md-block\">\n  <!-- Sidebar Toggler (Sidebar) -->\n  <div class=\"text-center d-none d-md-inline\">\n    <button class=\"rounded-circle border-0\" id=\"sidebarToggle\"></button>\n  </div>\n</ul>\n<!-- End of Sidebar -->\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/componentes/sidebar/sidebar.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SidebarComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SidebarComponent = (function () {
+    function SidebarComponent() {
+    }
+    SidebarComponent.prototype.ngOnInit = function () {
+    };
+    return SidebarComponent;
+}());
+SidebarComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'app-sidebar',
+        template: __webpack_require__("../../../../../src/app/componentes/sidebar/sidebar.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/componentes/sidebar/sidebar.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], SidebarComponent);
+
+//# sourceMappingURL=sidebar.component.js.map
 
 /***/ }),
 
@@ -2928,6 +3248,7 @@ var MiRuteo = [
     { path: 'QuienSoy', component: __WEBPACK_IMPORTED_MODULE_13__componentes_quien_soy_quien_soy_component__["a" /* QuienSoyComponent */] },
     { path: 'Registro', component: __WEBPACK_IMPORTED_MODULE_11__componentes_registro_registro_component__["a" /* RegistroComponent */] },
     { path: 'Principal', component: __WEBPACK_IMPORTED_MODULE_5__componentes_principal_principal_component__["a" /* PrincipalComponent */] },
+    { path: 'Configuracion', component: __WEBPACK_IMPORTED_MODULE_5__componentes_principal_principal_component__["a" /* PrincipalComponent */] },
     { path: 'Listado', component: __WEBPACK_IMPORTED_MODULE_9__componentes_listado_listado_component__["a" /* ListadoComponent */] },
     { path: 'Paises', component: __WEBPACK_IMPORTED_MODULE_14__componentes_listado_de_paises_listado_de_paises_component__["a" /* ListadoDePaisesComponent */] },
     {
