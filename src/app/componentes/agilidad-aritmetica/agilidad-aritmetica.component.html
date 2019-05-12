@@ -1,5 +1,5 @@
 <form name="juego">
-  <h1>EL numeros sera redondeado al entero mas bajo cercano</h1>
+  <h1>El numeros sera redondeado al entero mas bajo cercano</h1>
 <ul>
    <li>
    Primer número: <input [(ngModel)]="nuevoJuego.primerNumero" placeholder="ingrese numero" name="numeroIngresado" type="number"  class="form-control" style="width:50%" readonly/>
@@ -23,9 +23,10 @@
   </li>
   <li>
     <h2><p><i class="fa fa-spinner fa-spin"></i>Esperando numero...</p></h2>
-
     <h3 [hidden]="!nuevoJuego.gano">usted adivino el número</h3>
     <h3 [hidden]="nuevoJuego.gano">usted aún no gano </h3>
+
+
   </li>
 </ul>
 
