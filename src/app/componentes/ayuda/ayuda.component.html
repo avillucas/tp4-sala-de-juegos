@@ -1,0 +1,4 @@
+<div class="alert {{tipo | alertClass}}" role="alert" [hidden]="!mostrar" >
+  <i *ngIf="esperando" class="fa fa-spinner fa-spin"></i>
+  {{ mensaje }}
+</div>

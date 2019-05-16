@@ -27,7 +27,6 @@ import { ListadosComponent } from './componentes/listados/listados.component';
 import { JuegosComponent } from './componentes/juegos/juegos.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { MenuCardComponent } from './componentes/menu-card/menu-card.component';
-import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { QuienSoyComponent } from './componentes/quien-soy/quien-soy.component';
 import { AnagramaComponent } from './componentes/anagrama/anagrama.component';
 import { ListadoDePaisesComponent } from './componentes/listado-de-paises/listado-de-paises.component';
@@ -46,6 +45,10 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { NavComponent } from './componentes/nav/nav.component';
 import { SidebarComponent } from './componentes/sidebar/sidebar.component';
 import { LogoutComponent } from './componentes/logout/logout.component';
+import { PopupComponent } from './componentes/popup/popup.component';
+import { AyudaComponent } from './componentes/ayuda/ayuda.component';
+import { AlertClassPipe } from './pipes/alert-class.pipe';
+
 
 
 @NgModule({
@@ -65,7 +68,6 @@ import { LogoutComponent } from './componentes/logout/logout.component';
     JuegosComponent,
     RegistroComponent,
     MenuCardComponent,
-    CabeceraComponent,
     QuienSoyComponent,
     AnagramaComponent,
     ListadoDePaisesComponent,
@@ -82,7 +84,11 @@ import { LogoutComponent } from './componentes/logout/logout.component';
     FooterComponent,
     NavComponent,
     SidebarComponent,
-    LogoutComponent
+    LogoutComponent,
+    PopupComponent,
+    AyudaComponent,
+    AlertClassPipe,
+
   ],
   imports: [
     BrowserModule,
