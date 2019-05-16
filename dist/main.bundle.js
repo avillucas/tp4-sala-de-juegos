@@ -2753,7 +2753,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/componentes/quien-soy/quien-soy.component.html":
 /***/ (function(module, exports) {
 
-module.exports = " <!-- Page Wrapper -->\n <div id=\"wrapper\">\n\n    <app-sidebar></app-sidebar>\n\n    <!-- Content Wrapper -->\n    <div id=\"content-wrapper\" class=\"d-flex flex-column\">\n\n      <!-- Main Content -->\n      <div id=\"content\">\n\n        <app-header></app-header>\n\n        <div class=\"container-fluid\">\n          <!-- Page Heading -->\n          <div class=\"row\">\n            <!-- First Container -->\n            <div id=\"quiwn\" class=\"container-fluid bg-1 text-center\">\n                <h3 class=\"margin\">Quién Soy?</h3>\n                <img\n                  src=\"./assets/imagenes/quien-soy-dukula.jpg\"\n                  class=\"img-responsive img-circle margin\"\n                  style=\"display:inline\"\n                  alt=\"Duckula\"\n                  width=\"350\"\n                  height=\"350\"\n                />\n                <h3>Soy Un alumno de la UTN FRA</h3>\n              </div>\n\n              <!-- Second Container -->\n              <div id=\"que\" class=\"container-fluid bg-2 text-center\">\n                <h3 class=\"margin\">Esto es un trabajo práctico</h3>\n                <p>\n                  Cada universidad, cada facultad, cada carrera y obviamente cada materia en\n                  particular tiene estrategias didácticas y formas de evaluación diferentes. A\n                  pesar de que en muchos casos las universidades intentan estandarizar la\n                  forma de dictar clase para generar un orden en las planificaciones\n                  cuatrimestre a cuatrimestre, las formas de evaluación son elementales tanto\n                  para las instituciones y profesores como para los alumnos. A través de la\n                  evaluación formativa el educador busca información en el alumno para lograr\n                  comprender cómo se está produciendo el proceso de aprendizaje y poder\n                  reajustar los objetivos pedagógicos. Y para el alumno es una muestra del\n                  progreso que está logrando y si puede aplicar, materializar y darle\n                  visibilidad a la comprensión del tema. Según Black y William (1998), la\n                  evaluación formativa, ayuda a que los estudiantes sean independientes a la\n                  hora del aprendizaje, es decir, se presenta como receptor, autorregulador y\n                  centro de esa misma evaluación.\n                </p>\n                <a href=\"#\" class=\"btn btn-default btn-lg\">\n                  <span class=\"glyphicon glyphicon-file\"></span> Descargar PDF\n                </a>\n              </div>\n\n              <!-- Third Container (Grid) -->\n              <div id=\"donde\" class=\"container-fluid bg-3 text-center\">\n                <h3 class=\"margin\">Dónde Funciona?</h3>\n                <br />\n                <div class=\"row\">\n                  <div class=\"col-sm-4\">\n                    <p>\n                      Con las tecnologias WEB que permiten desarrollar aplicaciones\n                      multiplataforma\n                    </p>\n\n                  </div>\n                  <div class=\"col-sm-4\">\n                    <p>\n                      Principalmente orientada a la experiencia del usuario, garantizando que\n                      su funcionamieto sea fluido y pensado en el comportamiento del usuario y\n                      en la funcionalidad.\n                    </p>\n\n                  </div>\n                  <div class=\"col-sm-4\">\n                    <p>\n                      Para los sistemas operativos lideres en el mercado del consumo masivo\n                    </p>\n\n                  </div>\n                </div>\n              </div>\n\n          </div>\n\n        </div>\n        <!-- /.container-fluid -->\n\n      </div>\n      <!-- End of Main Content -->\n\n  </div>\n  <!-- End of Page Wrapper -->\n\n  <app-logout></app-logout>\n"
+module.exports = " <!-- Page Wrapper -->\n <div id=\"wrapper\">\n\n    <app-sidebar></app-sidebar>\n\n    <!-- Content Wrapper -->\n    <div id=\"content-wrapper\" class=\"d-flex flex-column\">\n\n      <!-- Main Content -->\n      <div id=\"content\">\n\n        <app-header></app-header>\n\n        <div class=\"container-fluid\">\n          <!-- Page Heading -->\n          <div class=\"row\">\n            <!-- First Container -->\n            <div id=\"quiwn\" class=\"container-fluid bg-1 text-center\">\n                <h3 class=\"margin\">Quién Soy?</h3>\n                <img\n                  src=\"./assets/imagenes/quien-soy-dukula.jpg\"\n                  class=\"img-responsive img-circle margin\"\n                  style=\"display:inline\"\n                  alt=\"Duckula\"\n                  width=\"350\"\n                  height=\"350\"\n                />\n                <h3>Soy Un alumno de la UTN FRA</h3>\n                <a href=\"https://github.com/avillucas/tp4-sala-de-juegos\" target=\"_blank\">Este Trabajo practico en GitHub</a>\n              </div>\n\n              <!-- Second Container -->\n              <div id=\"que\" class=\"container-fluid bg-2 text-center\">\n                <h3 class=\"margin\">Esto es un trabajo práctico</h3>\n                <p>\n                  Cada universidad, cada facultad, cada carrera y obviamente cada materia en\n                  particular tiene estrategias didácticas y formas de evaluación diferentes. A\n                  pesar de que en muchos casos las universidades intentan estandarizar la\n                  forma de dictar clase para generar un orden en las planificaciones\n                  cuatrimestre a cuatrimestre, las formas de evaluación son elementales tanto\n                  para las instituciones y profesores como para los alumnos. A través de la\n                  evaluación formativa el educador busca información en el alumno para lograr\n                  comprender cómo se está produciendo el proceso de aprendizaje y poder\n                  reajustar los objetivos pedagógicos. Y para el alumno es una muestra del\n                  progreso que está logrando y si puede aplicar, materializar y darle\n                  visibilidad a la comprensión del tema. Según Black y William (1998), la\n                  evaluación formativa, ayuda a que los estudiantes sean independientes a la\n                  hora del aprendizaje, es decir, se presenta como receptor, autorregulador y\n                  centro de esa misma evaluación.\n                </p>\n                <a href=\"#\" class=\"btn btn-default btn-lg\">\n                  <span class=\"glyphicon glyphicon-file\"></span> Descargar PDF\n                </a>\n              </div>\n\n              <!-- Third Container (Grid) -->\n              <div id=\"donde\" class=\"container-fluid bg-3 text-center\">\n                <h3 class=\"margin\">Dónde Funciona?</h3>\n                <br />\n                <div class=\"row\">\n                  <div class=\"col-sm-4\">\n                    <p>\n                      Con las tecnologias WEB que permiten desarrollar aplicaciones\n                      multiplataforma\n                    </p>\n\n                  </div>\n                  <div class=\"col-sm-4\">\n                    <p>\n                      Principalmente orientada a la experiencia del usuario, garantizando que\n                      su funcionamieto sea fluido y pensado en el comportamiento del usuario y\n                      en la funcionalidad.\n                    </p>\n\n                  </div>\n                  <div class=\"col-sm-4\">\n                    <p>\n                      Para los sistemas operativos lideres en el mercado del consumo masivo\n                    </p>\n\n                  </div>\n                </div>\n              </div>\n\n          </div>\n\n        </div>\n        <!-- /.container-fluid -->\n\n      </div>\n      <!-- End of Main Content -->\n\n  </div>\n  <!-- End of Page Wrapper -->\n\n  <app-logout></app-logout>\n"
 
 /***/ }),
 
@@ -3135,7 +3135,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/componentes/tateti/tateti.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"text-align:center\">\n    <h1>{{ nuevoJuego.nombre }}!</h1>\n</div>\n<h1 *ngIf=\"Mensaje\">{{ Mensaje }}!</h1>\n<dl>\n  <dt>Leyenda</dt>\n  <dd>Usuario : X</dd>\n  <dd>Maquina : O</dd>\n</dl>\n<table>\n  <tr>\n    <td><app-tateti-casillero  [tomado]=\"EstaTomado(1)\" (TomarCasillero)=\"Tomar(1)\"  ></app-tateti-casillero></td>\n    <td><app-tateti-casillero  [tomado]=\"EstaTomado(2)\" (TomarCasillero)=\"Tomar(2)\"  ></app-tateti-casillero></td>\n    <td><app-tateti-casillero  [tomado]=\"EstaTomado(3)\" (TomarCasillero)=\"Tomar(3)\"  ></app-tateti-casillero></td>\n  </tr>\n  <tr>\n      <td><app-tateti-casillero  [tomado]=\"EstaTomado(4)\" (TomarCasillero)=\"Tomar(4)\"  ></app-tateti-casillero></td>\n      <td><app-tateti-casillero  [tomado]=\"EstaTomado(5)\" (TomarCasillero)=\"Tomar(5)\"  ></app-tateti-casillero></td>\n      <td><app-tateti-casillero  [tomado]=\"EstaTomado(6)\" (TomarCasillero)=\"Tomar(6)\"  ></app-tateti-casillero></td>\n  </tr>\n  <tr>\n      <td><app-tateti-casillero  [tomado]=\"EstaTomado(7)\" (TomarCasillero)=\"Tomar(7)\"  ></app-tateti-casillero></td>\n      <td><app-tateti-casillero  [tomado]=\"EstaTomado(8)\" (TomarCasillero)=\"Tomar(8)\"  ></app-tateti-casillero></td>\n      <td><app-tateti-casillero  [tomado]=\"EstaTomado(9)\" (TomarCasillero)=\"Tomar(9)\"  ></app-tateti-casillero></td>\n  </tr>\n</table>\n"
+module.exports = "<div style=\"text-align:center\">\n    <h1>{{ nuevoJuego.nombre }}!</h1>\n    <h2>Juga un tateti tenes las  X para competir contra la maquina </h2>\n</div>\n<app-ayuda></app-ayuda>\n<div class=\"row\">\n    <div class=\"col-lg-2\"></div>\n    <div class=\"col-lg-8 \">\n        <table>\n          <tr>\n            <td><app-tateti-casillero  [tomado]=\"EstaTomado(1)\" (TomarCasillero)=\"Tomar(1)\"  ></app-tateti-casillero></td>\n            <td><app-tateti-casillero  [tomado]=\"EstaTomado(2)\" (TomarCasillero)=\"Tomar(2)\"  ></app-tateti-casillero></td>\n            <td><app-tateti-casillero  [tomado]=\"EstaTomado(3)\" (TomarCasillero)=\"Tomar(3)\"  ></app-tateti-casillero></td>\n          </tr>\n          <tr>\n              <td><app-tateti-casillero  [tomado]=\"EstaTomado(4)\" (TomarCasillero)=\"Tomar(4)\"  ></app-tateti-casillero></td>\n              <td><app-tateti-casillero  [tomado]=\"EstaTomado(5)\" (TomarCasillero)=\"Tomar(5)\"  ></app-tateti-casillero></td>\n              <td><app-tateti-casillero  [tomado]=\"EstaTomado(6)\" (TomarCasillero)=\"Tomar(6)\"  ></app-tateti-casillero></td>\n          </tr>\n          <tr>\n              <td><app-tateti-casillero  [tomado]=\"EstaTomado(7)\" (TomarCasillero)=\"Tomar(7)\"  ></app-tateti-casillero></td>\n              <td><app-tateti-casillero  [tomado]=\"EstaTomado(8)\" (TomarCasillero)=\"Tomar(8)\"  ></app-tateti-casillero></td>\n              <td><app-tateti-casillero  [tomado]=\"EstaTomado(9)\" (TomarCasillero)=\"Tomar(9)\"  ></app-tateti-casillero></td>\n          </tr>\n        </table>\n        <!--\n        <dl>\n          <dt>Leyenda</dt>\n          <dd>Usuario : X</dd>\n          <dd>Maquina : O</dd>\n        </dl>\n        -->\n    </div>\n</div>\n"
 
 /***/ }),
 
@@ -3146,6 +3146,18 @@ module.exports = "<div style=\"text-align:center\">\n    <h1>{{ nuevoJuego.nombr
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TatetiComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__clases_juego_tateti__ = __webpack_require__("../../../../../src/app/clases/juego-tateti.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__juegos_juegos_component__ = __webpack_require__("../../../../../src/app/componentes/juegos/juegos.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__servicios_resultados_service__ = __webpack_require__("../../../../../src/app/servicios/resultados.service.ts");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3157,50 +3169,55 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var TatetiComponent = (function () {
-    function TatetiComponent() {
-        this.enviarJuego = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
-        console.info('Ta Te Ti iniciando');
-        this.nuevoJuego = new __WEBPACK_IMPORTED_MODULE_1__clases_juego_tateti__["a" /* JuegoTateti */]();
-        this.ShowMensaje('Elegí un casillero:');
+
+
+var TatetiComponent = (function (_super) {
+    __extends(TatetiComponent, _super);
+    function TatetiComponent(resultadosDao) {
+        var _this = _super.call(this, resultadosDao) || this;
+        _this.enviarJuego = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+        //console.info('Ta Te Ti iniciando');
+        _this.nuevoJuego = new __WEBPACK_IMPORTED_MODULE_1__clases_juego_tateti__["a" /* JuegoTateti */]();
+        return _this;
+        //this.ShowMensaje('Elegí un casillero:');
     }
     TatetiComponent.prototype.EstaTomado = function (indice) {
         return this.nuevoJuego.EstaTomado(indice);
     };
     TatetiComponent.prototype.Tomar = function (nroCasillero) {
-        //juega el jugador
-        var casilleroTomadoJugador = this.nuevoJuego.JugadorTomarCasillero(nroCasillero);
-        console.info('Jugador:', casilleroTomadoJugador);
-        // delay
-        this.Verificar();
-        // juega la maquina
         if (this.nuevoJuego.QuedanMovidas()) {
-            var casilleroTomadoMaquina = this.nuevoJuego.MaquinaJugar();
-            console.info('Maquina:', casilleroTomadoMaquina);
+            //juega el jugador
+            var casilleroTomadoJugador = this.nuevoJuego.JugadorTomarCasillero(nroCasillero);
+            console.info('Jugador:', casilleroTomadoJugador);
+            // delay
+            this.Verificar();
+            if (this.nuevoJuego.QuedanMovidas()) {
+                var casilleroTomadoMaquina = this.nuevoJuego.MaquinaJugar();
+                console.info('Maquina:', casilleroTomadoMaquina);
+                this.Verificar();
+            }
         }
-        this.Verificar();
     };
     TatetiComponent.prototype.Verificar = function () {
-        this.ShowMensaje('Verificando....');
         if (this.nuevoJuego.verificar()) {
             this.enviarJuego.emit(this.nuevoJuego);
-            this.ShowMensaje('Gano');
+            this.ayuda.MostrarGanador('Venciste a la maquina');
         }
         else {
-            this.ShowMensaje('Perdiste la maquina tiene una linea ');
+            this.ayuda.MostrarPerdedor('La Maquina te gano');
+        }
+        if (!this.nuevoJuego.QuedanMovidas()) {
+            this.guardarResultado(this.nuevoJuego);
         }
     };
     TatetiComponent.prototype.Reiniciar = function () {
         this.nuevoJuego.reiniciar();
     };
-    TatetiComponent.prototype.ShowMensaje = function (mensaje) {
-        this.Mensaje = mensaje;
-    };
     TatetiComponent.prototype.ngOnInit = function () {
         this.nuevoJuego.iniciar();
     };
     return TatetiComponent;
-}());
+}(__WEBPACK_IMPORTED_MODULE_2__juegos_juegos_component__["a" /* JuegosComponent */]));
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])(),
     __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]) === "function" && _a || Object)
@@ -3211,10 +3228,10 @@ TatetiComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/componentes/tateti/tateti.component.html"),
         styles: [__webpack_require__("../../../../../src/app/componentes/tateti/tateti.component.css")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__servicios_resultados_service__["a" /* ResultadosService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__servicios_resultados_service__["a" /* ResultadosService */]) === "function" && _b || Object])
 ], TatetiComponent);
 
-var _a;
+var _a, _b;
 //# sourceMappingURL=tateti.component.js.map
 
 /***/ }),
