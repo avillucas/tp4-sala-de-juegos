@@ -7,7 +7,8 @@
   <div class="col-lg-6">
     <!-- body-->
     <form name="juego">
-      <label>Ingresa un numero: </label>
+        <app-ayuda (ReiniciarClick)="ReiniciarJuego()"></app-ayuda>
+      <!-- <label>Ingresa un numero: </label> -->
       <input
         [(ngModel)]="nuevoJuego.numeroIngresado"
         placeholder="Ingrese numero que crees que elegimos"
@@ -23,7 +24,7 @@
       >
         Verificar si Adivine
       </button>
-      <app-ayuda></app-ayuda>
+
       <!--
             <p *ngIf="nuevoJuego.numeroSecreto != 0">
                 <i class="fa fa-spinner fa-spin"></i>Esperando que ingrese un

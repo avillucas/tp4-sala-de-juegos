@@ -1,14 +1,32 @@
-
-
-<div class="panel panel-default">
-    <div class="hero-text">
-        <h1 style="font-size:50px">Sala de Juegos</h1>
-        <p>Octavio villegas</p>
-        <a href="https://github.com/octaviovillegas"target="_blank">en GitHub <i class="fa fa-github"></i></a>
-        <a  routerLink="/QuienSoy"target="_blank">Quien Soy? <i class="fa fa-github"></i></a>
+<div class="container">
+  <!-- Outer Row -->
+  <div class="row justify-content-center">
+    <div class="col-xl-10 col-lg-12 col-md-9">
+      <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+          <!-- Nested Row within Card Body -->
+          <div class="row">
+            <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+            <div class="col-lg-6">
+              <div class="p-5">
+                <div class="text-center">
+                  <h1 class="h4 text-gray-900 mb-4">
+                    Oops! Ha ocurrido un error
+                  </h1>
+                  <p>La pagina que estas intentando buscar no existe.
+                    <br/>
+                    Podes intentar ir a</p>
+                  <ul>
+                    <li><a class="small" routerLink="/Registro">Registro</a></li>
+                    <li><a class="small" routerLink="/Login">Ingreso</a></li>
+                    <li><a class="small" routerLink="/Principal">Pantalla Principal</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span>Registrase</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Ingresar</a></li>
-          </ul>
+  </div>
 </div>

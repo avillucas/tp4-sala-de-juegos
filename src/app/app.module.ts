@@ -5,11 +5,8 @@ import { AppComponent } from './app.component';
 import { AdivinaElNumeroComponent } from './componentes/adivina-el-numero/adivina-el-numero.component';
 import { ListadoDeResultadosComponent } from './componentes/listado-de-resultados/listado-de-resultados.component';
 import { LoginComponent } from './componentes/login/login.component';
-// ngboostrap
-// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-// import { AccordionModule } from 'ngx-bootstrap';
 import { HttpModule } from '@angular/http';
-import { MiHttpService } from './servicios/mi-http/mi-http.service';
+import { MyhttpService } from './servicios/myhttp.service';
 import { PaisesService } from './servicios/paises.service';
 import { JugadoresService } from './servicios/jugadores.service';
 import { ArchivosJugadoresService } from './servicios/archivos-jugadores.service';
@@ -23,7 +20,6 @@ import { RuteandoModule } from './ruteando/ruteando.module';
 import { ListadoComponent } from './componentes/listado/listado.component';
 import { JugadoresListadoComponent } from './componentes/jugadores-listado/jugadores-listado.component';
 import { JuegoServiceService } from './servicios/juego-service.service';
-import { ListadosComponent } from './componentes/listados/listados.component';
 import { JuegosComponent } from './componentes/juegos/juegos.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { MenuCardComponent } from './componentes/menu-card/menu-card.component';
@@ -32,7 +28,6 @@ import { AnagramaComponent } from './componentes/anagrama/anagrama.component';
 import { ListadoDePaisesComponent } from './componentes/listado-de-paises/listado-de-paises.component';
 import { MapaDeGoogleComponent } from './componentes/mapa-de-google/mapa-de-google.component'
 //import { AgmCoreModule } from '@agm/core';
-import { InputJugadoresComponent } from './componentes/input-jugadores/input-jugadores.component';
 import { SexoPipe } from './pipes/sexo.pipe';
 import { TatetiComponent } from './componentes/tateti/tateti.component';
 import { PiedraPapelTijeraComponent } from './componentes/piedra-papel-tijera/piedra-papel-tijera.component';
@@ -41,13 +36,16 @@ import { OperadorPipe } from './pipes/operador.pipe';
 import { SimonComponent } from './componentes/simon/simon.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './componentes/header/header.component';
-import { FooterComponent } from './componentes/footer/footer.component';
-import { NavComponent } from './componentes/nav/nav.component';
 import { SidebarComponent } from './componentes/sidebar/sidebar.component';
 import { LogoutComponent } from './componentes/logout/logout.component';
 import { PopupComponent } from './componentes/popup/popup.component';
 import { AyudaComponent } from './componentes/ayuda/ayuda.component';
 import { AlertClassPipe } from './pipes/alert-class.pipe';
+import { UsuariosService } from './servicios/usuarios.service';
+import { AuthGuardGuard } from './guards/auth-guard.guard';
+import { ListadosMenuComponent } from './componentes/listados-menu/listados-menu.component';
+import { ResultadosService } from './servicios/resultados.service';
+
 
 
 
@@ -64,7 +62,6 @@ import { AlertClassPipe } from './pipes/alert-class.pipe';
     AdivinaMasListadoComponent,
     AgilidadMasListadoComponent,
     ListadoComponent,
-    ListadosComponent,
     JuegosComponent,
     RegistroComponent,
     MenuCardComponent,
@@ -73,7 +70,6 @@ import { AlertClassPipe } from './pipes/alert-class.pipe';
     ListadoDePaisesComponent,
     MapaDeGoogleComponent,
     JugadoresListadoComponent,
-    InputJugadoresComponent,
     SexoPipe,
     TatetiComponent,
     PiedraPapelTijeraComponent,
@@ -81,13 +77,12 @@ import { AlertClassPipe } from './pipes/alert-class.pipe';
     OperadorPipe,
     SimonComponent,
     HeaderComponent,
-    FooterComponent,
-    NavComponent,
     SidebarComponent,
     LogoutComponent,
     PopupComponent,
     AyudaComponent,
     AlertClassPipe,
+    ListadosMenuComponent,
 
   ],
   imports: [
@@ -99,7 +94,16 @@ import { AlertClassPipe } from './pipes/alert-class.pipe';
     HttpModule,
     //  AgmCoreModule.forRoot({    apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'   })
   ],
-  providers: [JuegoServiceService, MiHttpService, PaisesService, ArchivosJugadoresService, JugadoresService],
+  providers: [
+    JuegoServiceService,
+    AuthGuardGuard,
+    MyhttpService,
+    UsuariosService,
+    ResultadosService,
+    PaisesService,
+    ArchivosJugadoresService,
+    JugadoresService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

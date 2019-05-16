@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
-import { MiHttpService } from './mi-http/mi-http.service';
 import { apiConfig } from '../../environments/environment';
+import { MyhttpService } from './myhttp.service';
 
 @Injectable()
 export class ArchivosJugadoresService {
 
   api: string;
   peticion: any;
-  constructor(public miHttp: MiHttpService) {
+
+  constructor(public miHttp: MyhttpService) {
     this.api = apiConfig.host + 'jugadoresarchivo/apirestjugadores/';
   }
 

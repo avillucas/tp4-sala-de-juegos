@@ -29,4 +29,9 @@ export class JuegoAdivina extends Juego {
     return 'Te pasate';
   }
 
+  public reiniciar() {
+    this.generarnumero();
+    this.numeroIngresado = 0;
+  }
+
 }

@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-//para poder hacer las validaciones
-//import { Validators, FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import { Validators, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { UsuariosService } from '../../servicios/usuarios.service';
+import { PopupComponent } from '../popup/popup.component';
+import { AyudaComponent } from '../ayuda/ayuda.component';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
@@ -9,20 +11,55 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class RegistroComponent implements OnInit {
 
-  email: string
-  password: string;
-  passwordConfirmacion: string;
+  @ViewChild(PopupComponent) popup: PopupComponent;
+  @ViewChild(AyudaComponent) ayuda: AyudaComponent;
 
-  constructor(private router: Router) { }
+
+  constructor(private builder: FormBuilder, private router: Router, private dao: UsuariosService) { }
+
+  nombre = new FormControl('', [
+    Validators.required,
+    Validators.minLength(1),
+    Validators.maxLength(255)
+  ]);
+
+  email = new FormControl('', [
+    Validators.required,
+    Validators.minLength(1),
+    Validators.maxLength(255),
+    Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+  ]);
+
+  password = new FormControl('', [
+    Validators.required,
+    Validators.minLength(1),
+    Validators.maxLength(255)
+  ]);
+
+  registroForm: FormGroup = this.builder.group({
+    nombre: this.nombre,
+    email: this.email,
+    password: this.password,
+  });
 
   ngOnInit() {
   }
 
   Registrar() {
-    // TODO llamar al servicio loguear etc
-    //TODO validar el formulario etc
-    this.router.navigate(['/Principal']);
+    // TODO mostrar los mensajes en ayuda
+    console.info(this.registroForm.errors);
 
+    const nombre = this.registroForm.get('nombre').value;
+    const email = this.registroForm.get('email').value;
+    const password = this.registroForm.get('password').value;
+    //
+    this.dao.crear(nombre, email, password).then(data => {
+      this.popup.MostrarMensajeRegistro();
+    });
+  }
+
+  AlCerrarPopUpRegistro() {
+    this.router.navigate(['/Login']);
   }
 
 }

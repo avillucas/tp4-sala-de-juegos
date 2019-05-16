@@ -22,4 +22,6 @@ export abstract class Juego {
   public retornarAyuda() {
     return 'No se definio una ayuda para este juego';
   }
+
+  abstract reiniciar();
 }

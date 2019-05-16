@@ -43,11 +43,20 @@
       </div>
     </div>
   </li>
+
   <li class="nav-item ">
-      <a class="nav-link" routerLink="/Listado" >
-        <span>Listados de resultados</span>
-      </a>
+    <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseListados"  aria-controls="collapsePages">
+      <i class="fas fa-fw fa-folder"></i>
+      <span>Listados</span>
+    </a>
+    <div id="collapsePages" class="collapse " aria-labelledby="headingPages" data-parent="#accordionSidebar">
+      <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" routerLink="/Listados/Jugadores">Jugadores</a>
+          <a class="collapse-item" routerLink="/Listados/Resultados" >Resultados</a>
+      </div>
+    </div>
   </li>
+
   <li class="nav-item ">
       <a class="nav-link" routerLink="/Configuracion">
         <span>Configuracion</span>

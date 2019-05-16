@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ArchivosJugadoresService } from './archivos-jugadores.service'
+import { ArchivosJugadoresService } from './archivos-jugadores.service';
 
 @Injectable()
 
