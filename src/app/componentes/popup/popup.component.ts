@@ -14,6 +14,7 @@ export class PopupComponent implements OnInit {
   private mostrar: boolean;
   private mensajeFinal: boolean;
   private mensajeGanador: boolean;
+  private botonTexto: string;
 
   constructor() {
     this.reset();
@@ -24,13 +25,22 @@ export class PopupComponent implements OnInit {
     this.mostrar = false;
     this.mensajeFinal = false;
     this.mensajeGanador = false;
+    this.botonTexto = 'Cerrar';
+  }
+
+  set BotonTexto(texto: string) {
+    this.botonTexto = texto;
+  }
+
+  get Hidden(): boolean {
+    return !this.mostrar;
   }
 
   Mostrar() {
     this.mostrar = true;
-    //TODO MEJORAR
+    // TODO MEJORAR
+    // TODO hacer que se muestre
     let x = document.getElementById('modalMensajes');
-    x.className = ' show ';
     if (this.mensajeFinal) {
       x.className = (this.mensajeGanador) ? ' ganador ' : ' perdedor ';
     }
@@ -39,6 +49,17 @@ export class PopupComponent implements OnInit {
 
   MostrarFinal() {
     this.mensajeFinal = true;
+    this.Mostrar();
+  }
+
+  MostrarMensajeRegistro() {
+    this.BotonTexto = 'Ir al Inicio';
+    this.mensaje = 'El usuario se creo correctamente. Ingrese los mismos datos desde la pantalla de inicio.';
+    this.Mostrar();
+  }
+
+  MostrarMensaje(mensaje: string) {
+    this.mensaje = mensaje;
     this.Mostrar();
   }
 
@@ -65,6 +86,7 @@ export class PopupComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.reset();
   }
 
 }

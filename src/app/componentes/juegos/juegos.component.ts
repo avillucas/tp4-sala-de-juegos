@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, EventEmitter, Output } from '@angular/core';
+import { ResultadosService } from '../../servicios/resultados.service';
+import { Juego } from '../../clases/juego';
+import { AyudaComponent } from '../ayuda/ayuda.component';
 
 @Component({
   selector: 'app-juegos',
@@ -7,9 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JuegosComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild(AyudaComponent) protected ayuda: AyudaComponent;
+  @Output() protected enviarJuego: EventEmitter<any> = new EventEmitter<any>();
+
+  constructor(private resultadosDao: ResultadosService) { }
+
+  guardarResultado(juego: Juego) {
+    this.resultadosDao.cargar(juego);
+  }
 
   ngOnInit() {
+  }
+
+  protected ReiniciarJuego(){
+    console.log('reiniciar generico');
   }
 
 }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 // importo del module principal
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { AdivinaElNumeroComponent } from '../componentes/adivina-el-numero/adivina-el-numero.component';
 import { ListadoDeResultadosComponent } from '../componentes/listado-de-resultados/listado-de-resultados.component';
 import { LoginComponent } from '../componentes/login/login.component';
@@ -12,7 +12,6 @@ import { MenuComponent } from '../componentes/menu/menu.component';
 import { AdivinaMasListadoComponent } from '../componentes/adivina-mas-listado/adivina-mas-listado.component';
 import { AgilidadMasListadoComponent } from '../componentes/agilidad-mas-listado/agilidad-mas-listado.component';
 import { ListadoComponent } from '../componentes/listado/listado.component'
-import { ListadosComponent } from '../componentes/listados/listados.component';
 import { JuegosComponent } from '../componentes/juegos/juegos.component';
 import { RegistroComponent } from '../componentes/registro/registro.component';
 import { MenuCardComponent } from '../componentes/menu-card/menu-card.component';
@@ -23,32 +22,43 @@ import { JugadoresListadoComponent } from '../componentes/jugadores-listado/juga
 import { AnagramaComponent } from '../componentes/anagrama/anagrama.component';
 import { TatetiComponent } from '../componentes/tateti/tateti.component';
 import { PiedraPapelTijeraComponent } from '../componentes/piedra-papel-tijera/piedra-papel-tijera.component';
+import { AuthGuardGuard } from '../guards/auth-guard.guard';
+import { ListadosMenuComponent } from '../componentes/listados-menu/listados-menu.component';
 
 
 // declaro donde quiero que se dirija
 const MiRuteo = [
-  { path: 'Jugadores', component: JugadoresListadoComponent },
   { path: '', component: PrincipalComponent },
   { path: 'Login', component: LoginComponent },
-  { path: 'Mapa', component: MapaDeGoogleComponent },
+  { path: 'Jugadores', component: JugadoresListadoComponent, canActivate: [AuthGuardGuard] },
+  // { path: 'Mapa', component: MapaDeGoogleComponent },
   { path: 'QuienSoy', component: QuienSoyComponent },
   { path: 'Registro', component: RegistroComponent },
   { path: 'Principal', component: PrincipalComponent },
-  { path: 'Configuracion', component: PrincipalComponent },
-  { path: 'Listado', component: ListadoComponent },
-  { path: 'Paises', component: ListadoDePaisesComponent },
+  { path: 'Configuracion', component: PrincipalComponent, canActivate: [AuthGuardGuard] },
+  {
+    path: 'Listado',
+    component: ListadoComponent,
+    children: [
+      { path: '', component: ListadosMenuComponent, canActivate: [AuthGuardGuard] },
+      { path: 'Jugadores', component: JugadoresListadoComponent, canActivate: [AuthGuardGuard] },
+      { path: 'Resultados', component: ListadoDeResultadosComponent, canActivate: [AuthGuardGuard] },
+      { path: 'Paises', component: ListadoDePaisesComponent, canActivate: [AuthGuardGuard] },
+    ]
+  },
+  //  { path: 'Paises', component: ListadoDePaisesComponent },
   {
     path: 'Juegos',
     component: JuegosComponent,
     children: [
-      { path: '', component: MenuCardComponent },
-      { path: 'Adivina', component: AdivinaElNumeroComponent },
-      { path: 'Agilidad', component: AgilidadAritmeticaComponent },
-      { path: 'AdivinaMasListado', component: AdivinaMasListadoComponent },
-      { path: 'AgilidadaMasListado', component: AgilidadMasListadoComponent },
-      { path: 'Anagrama', component: AnagramaComponent },
-      { path: 'Tateti', component: TatetiComponent },
-      { path: 'PiedraPapelTijera', component: PiedraPapelTijeraComponent }
+      { path: '', component: MenuCardComponent, canActivate: [AuthGuardGuard] },
+      { path: 'Adivina', component: AdivinaElNumeroComponent, canActivate: [AuthGuardGuard] },
+      { path: 'Agilidad', component: AgilidadAritmeticaComponent, canActivate: [AuthGuardGuard] },
+      { path: 'AdivinaMasListado', component: AdivinaMasListadoComponent, canActivate: [AuthGuardGuard] },
+      { path: 'AgilidadaMasListado', component: AgilidadMasListadoComponent, canActivate: [AuthGuardGuard] },
+      { path: 'Anagrama', component: AnagramaComponent, canActivate: [AuthGuardGuard] },
+      { path: 'Tateti', component: TatetiComponent, canActivate: [AuthGuardGuard] },
+      { path: 'PiedraPapelTijera', component: PiedraPapelTijeraComponent, canActivate: [AuthGuardGuard] }
     ]
   },
   { path: '**', component: ErrorComponent },

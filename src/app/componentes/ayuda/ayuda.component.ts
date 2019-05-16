@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Ayuda } from '../../enums/ayudas.enum';
 
 @Component({
@@ -9,9 +9,12 @@ import { Ayuda } from '../../enums/ayudas.enum';
 export class AyudaComponent implements OnInit {
 
   @Input() mensaje: string;
+  @Output() AlPresionarReiniciar = new EventEmitter();
+
   tipo: Ayuda;
   mostrar: boolean;
   esperando: boolean;
+  botonReiniciar: boolean;
 
   constructor() {
     this.reset();
@@ -22,17 +25,50 @@ export class AyudaComponent implements OnInit {
     this.tipo = Ayuda.Info;
     this.mostrar = false;
     this.esperando = false;
+    this.botonReiniciar = false;
   }
+
+
 
   MostrarAyuda(mensaje: string) {
     this.mensaje = mensaje;
     this.mostrar = true;
-    // TODO poner un timer y ocultarlo
     this.tipo = Ayuda.Warning;
     this.esperando = false;
-    console.info(mensaje);
   }
 
+  MostrarError(mensaje: string) {
+    this.mensaje = mensaje;
+    this.mostrar = true;
+    this.tipo = Ayuda.Danger;
+    this.esperando = false;
+  }
+
+  MostrarGanador(mensaje: string) {
+    this.mensaje = mensaje;
+    this.mostrar = true;
+    this.tipo = Ayuda.Success;
+    this.esperando = false;
+    this.botonReiniciar = false;
+  }
+
+  MostrarGanadorConReiniciar(mensaje: string) {
+    this.MostrarGanador(mensaje);
+    this.botonReiniciar = true;   
+  }
+ 
+  MostrarPerdedor(mensaje: string) {
+    this.mensaje = mensaje;
+    this.mostrar = true;
+    this.tipo = Ayuda.Danger;
+    this.esperando = false;
+    this.botonReiniciar = false;
+  }
+
+  MostrarPerdedorConReiniciar(mensaje: string) {
+    this.MostrarPerdedor(mensaje);
+    this.botonReiniciar = true;   
+  }
 
   MostrarEsperando() {
     this.mensaje = 'Esperando que ingrese tu respuesta';
@@ -43,6 +79,10 @@ export class AyudaComponent implements OnInit {
 
   OcultarPorFinalizacion() {
     this.reset();
+  }
+
+  ReiniciarClick() {
+    this.AlPresionarReiniciar.emit();
   }
 
   ngOnInit() {

@@ -11,21 +11,35 @@
                 <div class="text-center">
                   <h1 class="h4 text-gray-900 mb-4">Crea tu cuenta!</h1>
                 </div>
-                <form class="user">
+                <app-ayuda></app-ayuda>
+                <form class="user" [formGroup]="registroForm"  (ngSubmit)="Registrarse()" >
                   <div class="form-group">
-                    <input type="email" class="form-control form-control-user" [(ngModel)]="email" name="email"   id="exampleInputEmail" placeholder="Ingrese el usuario">
+                    <input type="nombre" class="form-control form-control-user"required [formControl]="nombre" name="nombre"   id="exampleInputNombre" placeholder="Ingrese su nombre">
                   </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control form-control-user" required [formControl]="email" name="email"   id="exampleInputEmail" placeholder="Ingrese su email">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control form-control-user" required [formControl]="password" name="password"  id="exampleInputPassword" placeholder="Contraseña">
+                  </div>
+                  <!--
                   <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">
-                      <input type="password" class="form-control form-control-user" [(ngModel)]="password" name="password"  id="exampleInputPassword" placeholder="Contraseña">
+                      <input type="password" class="form-control form-control-user" required [formControl]="password" name="password"  id="exampleInputPassword" placeholder="Contraseña">
                     </div>
                     <div class="col-sm-6">
-                      <input type="password" class="form-control form-control-user" [(ngModel)]="passwordConfirmacion" name="passwordConfirmacion"  id="exampleRepeatPassword" placeholder="Repita contraseña">
+                      <input type="password" class="form-control form-control-user" required [formControl]="passwordConfirmacion" name="passwordConfirmacion"  id="exampleRepeatPassword" placeholder="Repita contraseña">
                     </div>
+
                   </div>
+                  -->
+                  <!--
                   <a (click)="Registrarse()" class="btn btn-primary btn-user btn-block">
                    Registrarse
-                  </a><!--
+                  </a>
+                  -->
+                  <button type="submit" class="btn btn-primary btn-user btn-block" [disabled]="!registroForm.valid">Registrate</button>
+                  <!--
                   <hr>
                   <a href="index.html" class="btn btn-google btn-user btn-block">
                     <i class="fab fa-google fa-fw"></i> Register with Google
@@ -49,11 +63,11 @@
           </div>
         </div>
       </div>
-
     </div>
+    <app-popup ></app-popup>
     <!--
 
-      <h2 id="terminos">Terminos y condiciones</h2>
+    <h2 id="terminos">Terminos y condiciones</h2>
     <p>El Gobierno de la República Argentina (en adelante el “Gobierno Nacional”) no es responsable por los daños y perjuicios que puedan surgir, incluyendo, sin límite, daños, pérdidas o gastos directos, indirectos, que surjan en relación con el uso de los Activos Digitales o la imposibilidad de uso, en relación con cualquier falla en el vencimiento, error, omisión, interrupción, defecto, demora en la operación o transmisión, virus de computadora o falla del sistema de línea, aún en el caso de que el Gobierno Nacional o sus representantes fueran informados sobre la posibilidad de dichos daños, pérdidas o gastos.</p>
     <p>El Gobierno Nacional no controla ni garantiza la ausencia de virus ni de otros elementos en los contenidos que puedan producir alteraciones en su sistema informático (software y hardware) o en los documentos electrónicos y ficheros almacenados en su sistema informático.</p>
     <p>El Gobierno Nacional no puede garantizar que la transmisión de información por parte de los Usuarios sea completamente segura. El Usuario asume este riesgo.</p>

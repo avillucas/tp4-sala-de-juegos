@@ -18,13 +18,20 @@ export class JuegoAgilidad extends Juego {
     this.respuestaIngresada = respuestaIngresada;
   }
 
-
   set PrimerNumero(primerNumero: number) {
     this.primerNumero = primerNumero;
   }
 
   set SegundoNumero(segundoNumero: number) {
     this.segundoNumero = segundoNumero;
+  }
+
+  get Respuesta(){
+    return this.respuesta;
+  }
+
+  get RespuestaIngresada(){
+    return this.respuestaIngresada;
   }
 
   private calcularRespuesta() {
@@ -42,8 +49,8 @@ export class JuegoAgilidad extends Juego {
       case Operador.Multiplicacion:
         respuesta = this.primerNumero * this.segundoNumero;
         break;
-    }
-    this.respuesta = Math.floor(respuesta);
+    }    
+    this.respuesta = Math.floor(respuesta);    
   }
 
   private randomLength(length: number): number {
@@ -51,11 +58,8 @@ export class JuegoAgilidad extends Juego {
   }
 
   private traerOperadorAlAzar() {
-    const ind = this.randomLength(4);
-    switch (ind) {
-      case 0:
-        this.operador = Operador.Suma;
-        break;
+    const ind = this.randomLength(3);
+    switch (ind-1) {
       case 1:
         this.operador = Operador.Resta;
         break;
@@ -65,8 +69,10 @@ export class JuegoAgilidad extends Juego {
       case 3:
         this.operador = Operador.Multiplicacion;
         break;
-
-    }
+      default:
+        this.operador = Operador.Suma;
+        break;      
+    }    
   }
 
   private randomInt(min, max) :number{
@@ -81,6 +87,8 @@ export class JuegoAgilidad extends Juego {
     this.primerNumero = this.traerNumeroAlAzar();
     this.segundoNumero = this.traerNumeroAlAzar();
     this.traerOperadorAlAzar();
+    this.calcularRespuesta();
+    console.log('p:',this.primerNumero, 'op',this.operador, 's:',this.segundoNumero,'r:',this.respuesta);
   }
 
   public iniciar() {
@@ -101,8 +109,8 @@ export class JuegoAgilidad extends Juego {
     this.operador = Operador.Suma;
   }
 
-  public verificar(): boolean {
-    this.calcularRespuesta();
+  public verificar(): boolean {    
+    console.info(this.respuestaIngresada ,  this.respuesta);
     if (this.respuestaIngresada == this.respuesta) {
       this.gano = true;
     }

@@ -3,6 +3,8 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewChild } from '@angu
 import { JuegoAdivina } from '../../clases/juego-adivina';
 import { PopupComponent } from '../popup/popup.component';
 import { AyudaComponent } from '../ayuda/ayuda.component';
+import { JuegosComponent } from '../juegos/juegos.component';
+import { ResultadosService } from '../../servicios/resultados.service';
 
 @Component({
   selector: 'app-adivina-el-numero',
@@ -10,19 +12,16 @@ import { AyudaComponent } from '../ayuda/ayuda.component';
   styleUrls: ['./adivina-el-numero.component.css']
 })
 
-export class AdivinaElNumeroComponent implements OnInit {
-  @Output() enviarJuego: EventEmitter<any> = new EventEmitter<any>();
-  @ViewChild(PopupComponent) popup: PopupComponent;
-  @ViewChild(AyudaComponent) ayuda: AyudaComponent;
+export class AdivinaElNumeroComponent extends JuegosComponent implements OnInit {
 
-  nuevoJuego: JuegoAdivina;
   Mensaje: string;
   contador: number;
   ocultarVerificar: boolean;
+  nuevoJuego: JuegoAdivina;
 
-  constructor() {
+  constructor(resultadosDao: ResultadosService) {
+    super(resultadosDao);
     this.nuevoJuego = new JuegoAdivina();
-    //console.info('numero Secreto:', this.nuevoJuego.numeroSecreto);
     this.ocultarVerificar = false;
   }
 
@@ -64,19 +63,26 @@ export class AdivinaElNumeroComponent implements OnInit {
   verificar() {
     this.contador++;
     this.ocultarVerificar = true;
-    /// console.info('numero Secreto:', this.nuevoJuego.gano);
-    if (this.nuevoJuego.verificar()) {
+    if (this.nuevoJuego.verificar()) {      
       this.enviarJuego.emit(this.nuevoJuego);
-      this.ayuda.OcultarPorFinalizacion();
-      this.popup.MostrarGanador('Sos un Genio!!!');
+      this.ayuda.MostrarGanador('Adivinate sos un Genio!');
       this.nuevoJuego.numeroSecreto = 0;
     } else {
       this.ayuda.MostrarAyuda(this.manejadorMensajeOportunidades());
     }
-    // console.info('numero Secreto:', this.nuevoJuego.gano);
+    this.guardarResultado(this.nuevoJuego);
   }
-  /*
 
+  private reinciar() {
+    this.nuevoJuego.reiniciar();
+    this.ocultarVerificar = false;
+  }
+
+  ReiniciarJuego() {
+    this.reinciar();
+  }
+
+  /*
  MostarMensajeCierre(mensaje: string = 'este es el mensaje', ganador: boolean = false) {
    this.Mensaje = mensaje;
    if (ganador) {
