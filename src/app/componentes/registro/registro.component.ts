@@ -43,6 +43,9 @@ export class RegistroComponent implements OnInit {
   });
 
   ngOnInit() {
+    this.nombre.setValue('tester');
+    this.email.setValue('tester@tester.com');
+    this.password.setValue('tester');
   }
 
   Registrar() {
@@ -54,7 +57,7 @@ export class RegistroComponent implements OnInit {
     const password = this.registroForm.get('password').value;
     //
     this.dao.crear(nombre, email, password).then(data => {
-      this.popup.MostrarMensajeRegistro();
+      this.ayuda.MostrarMensajeRegistro();
     });
   }
 

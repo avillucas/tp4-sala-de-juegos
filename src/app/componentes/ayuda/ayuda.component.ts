@@ -54,9 +54,9 @@ export class AyudaComponent implements OnInit {
 
   MostrarGanadorConReiniciar(mensaje: string) {
     this.MostrarGanador(mensaje);
-    this.botonReiniciar = true;   
+    this.botonReiniciar = true;
   }
- 
+
   MostrarPerdedor(mensaje: string) {
     this.mensaje = mensaje;
     this.mostrar = true;
@@ -67,7 +67,7 @@ export class AyudaComponent implements OnInit {
 
   MostrarPerdedorConReiniciar(mensaje: string) {
     this.MostrarPerdedor(mensaje);
-    this.botonReiniciar = true;   
+    this.botonReiniciar = true;
   }
 
   MostrarEsperando() {
@@ -75,6 +75,13 @@ export class AyudaComponent implements OnInit {
     this.mostrar = true;
     this.esperando = true;
     this.tipo = Ayuda.Info;
+  }
+
+  MostrarMensajeRegistro() {
+    this.mensaje = 'El usuario se creo correctamente. Ingrese los mismos datos desde la pantalla de inicio.';
+    this.mostrar = true;
+    this.esperando = true;
+    this.tipo = Ayuda.Success;
   }
 
   OcultarPorFinalizacion() {

@@ -20,8 +20,6 @@ export class HeaderComponent implements OnInit {
     return this.datosUsuario.name;
   }
 
-  
-
   ngOnInit() {
   }
 

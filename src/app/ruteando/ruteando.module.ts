@@ -37,7 +37,7 @@ const MiRuteo = [
   { path: 'Principal', component: PrincipalComponent },
   { path: 'Configuracion', component: PrincipalComponent, canActivate: [AuthGuardGuard] },
   {
-    path: 'Listado',
+    path: 'Listados',
     component: ListadoComponent,
     children: [
       { path: '', component: ListadosMenuComponent, canActivate: [AuthGuardGuard] },

@@ -53,6 +53,8 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.email.setValue('admin@sala.com');
+    this.password.setValue('admin');
   }
 
   Entrar() {
