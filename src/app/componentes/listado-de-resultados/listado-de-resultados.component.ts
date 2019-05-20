@@ -9,17 +9,13 @@ import { ResultadosService } from '../../servicios/resultados.service';
 })
 export class ListadoDeResultadosComponent implements OnInit {
   @Input()
-  listado: Array<any>;
+  resultados: any;
 
   constructor(private dao: ResultadosService) {
+    this.dao.listar().then(data => { this.resultados = data; });
   }
 
   ngOnInit() {
-    //this.listado = this.dao.listar();
-  }
 
-  ver() {
-    console.info(this.listado);
   }
-
 }

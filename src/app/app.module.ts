@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { AdivinaElNumeroComponent } from './componentes/adivina-el-numero/adivina-el-numero.component';
 import { ListadoDeResultadosComponent } from './componentes/listado-de-resultados/listado-de-resultados.component';
 import { LoginComponent } from './componentes/login/login.component';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { MyhttpService } from './servicios/myhttp.service';
 import { PaisesService } from './servicios/paises.service';
 import { JugadoresService } from './servicios/jugadores.service';
@@ -14,8 +14,6 @@ import { ErrorComponent } from './componentes/error/error.component';
 import { PrincipalComponent } from './componentes/principal/principal.component';
 import { AgilidadAritmeticaComponent } from './componentes/agilidad-aritmetica/agilidad-aritmetica.component';
 import { MenuComponent } from './componentes/menu/menu.component';
-import { AdivinaMasListadoComponent } from './componentes/adivina-mas-listado/adivina-mas-listado.component';
-import { AgilidadMasListadoComponent } from './componentes/agilidad-mas-listado/agilidad-mas-listado.component';
 import { RuteandoModule } from './ruteando/ruteando.module';
 import { ListadoComponent } from './componentes/listado/listado.component';
 import { JugadoresListadoComponent } from './componentes/jugadores-listado/jugadores-listado.component';
@@ -45,6 +43,7 @@ import { UsuariosService } from './servicios/usuarios.service';
 import { AuthGuardGuard } from './guards/auth-guard.guard';
 import { ListadosMenuComponent } from './componentes/listados-menu/listados-menu.component';
 import { ResultadosService } from './servicios/resultados.service';
+import { AuthService } from './servicios/auth.service';
 
 
 
@@ -59,8 +58,6 @@ import { ResultadosService } from './servicios/resultados.service';
     LoginComponent,
     AgilidadAritmeticaComponent,
     MenuComponent,
-    AdivinaMasListadoComponent,
-    AgilidadMasListadoComponent,
     ListadoComponent,
     JuegosComponent,
     RegistroComponent,
@@ -91,7 +88,7 @@ import { ResultadosService } from './servicios/resultados.service';
     FormsModule,
     ReactiveFormsModule,
     RuteandoModule,
-    HttpModule,
+    HttpClientModule,
     //  AgmCoreModule.forRoot({    apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'   })
   ],
   providers: [
@@ -102,7 +99,8 @@ import { ResultadosService } from './servicios/resultados.service';
     ResultadosService,
     PaisesService,
     ArchivosJugadoresService,
-    JugadoresService
+    JugadoresService,
+    AuthService,
   ],
   bootstrap: [AppComponent]
 })

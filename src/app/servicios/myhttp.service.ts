@@ -1,35 +1,67 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 
 @Injectable()
 
 export class MyhttpService {
-  constructor(public http: Http) { }
+  constructor(public http: HttpClient) { }
+
+  private crearHeaders() {
+    return new HttpHeaders({ 'Content-type': 'application/json' });
+  }
+
+  private crearTokenHeaders(token) {
+    return new HttpHeaders({ 'Content-type': 'application/json', 'Authorization': 'Bearer ' + token });
+  }
 
   public httpGetP(url: string) {
+    const headers = this.crearHeaders();
     return this.http
-      .get(url)
+      .get(url, { headers: headers })
+      .toPromise()
+      .then(this.extractData)
+      .catch(this.handleError);
+  }
+
+  public httpGetO(url: string): Observable<any> {
+    const headers = this.crearHeaders();
+    return this.http
+      .get(url, { headers: headers })
+      .pipe(catchError(this.handleError('Error al obtener los objetos')));
+  }
+
+  public httpGetAutorized(url: string, token: string) {
+    const headers = this.crearTokenHeaders(token);
+    return this.http
+      .get(url, { headers: headers })
       .toPromise()
       .then(this.extractData)
       .catch(this.handleError);
   }
 
   public httpPostP(url: string, objeto: any) {
-    return this.http.post(url, objeto).toPromise()
+    const headers = this.crearHeaders();
+    return this.http
+      .post(url, objeto, { headers: headers })
+      .toPromise()
       .then(this.extractData)
       .catch(this.handleError);
   }
 
-  public httpGetO(url: string): Observable<any> {
+  public httpPostAutorized(url: string, objeto: any, token: string) {
+    const headers = this.crearTokenHeaders(token);
     return this.http
-      .get(url)
-      .pipe(catchError(this.handleError('Error al obtener los objetos')));
+      .post(url, objeto, { headers: headers })
+      .toPromise()
+      .then(this.extractData)
+      .catch(this.handleError);
   }
 
   private extractData(res: Response) {
-    return res.json() || {};
+    return res;
+    //return res.json() || {};
   }
 
   private handleError(error: Response | any) {

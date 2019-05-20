@@ -14,7 +14,8 @@ export const agilidadConfig = {
 };
 
 export const apiConfig = {
-  host: 'http://apisala.avillucas.com.ar/'
+  //host: 'http://apisala.avillucas.com.ar/'
+  host: 'http://localhost:8080/'
 };
 
 // tslint:disable-next-line:max-line-length

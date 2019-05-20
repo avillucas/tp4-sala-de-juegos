@@ -6,6 +6,7 @@ import { Subscription } from 'rxjs';
 import { TimerObservable } from 'rxjs/observable/TimerObservable';
 import { PopupComponent } from '../popup/popup.component';
 import { AyudaComponent } from '../ayuda/ayuda.component';
+import { AuthService } from '../../servicios/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -47,7 +48,8 @@ export class LoginComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private builder: FormBuilder,
-    private dao: UsuariosService
+    private dao: UsuariosService,
+    private auth: AuthService
   ) {
 
   }
@@ -61,11 +63,15 @@ export class LoginComponent implements OnInit {
     const email = this.loginForm.get('email').value;
     const password = this.loginForm.get('password').value;
     //
-    if (this.dao.login(email, password)) {
-      this.router.navigate(['/Principal']);
-    } else {
+    this.auth.login(email, password).then(data => {
+      console.log(data);
+      if (data.token) {
+        this.auth.saveToken(data.token);
+        this.router.navigate(['/Principal']);
+      }
+    }).catch(e => {
       this.ayuda.MostrarError('Error en las credenciales, por favor intente con otro usuario como admin@sala.com y admin ');
-    }
+    });
   }
 
 }

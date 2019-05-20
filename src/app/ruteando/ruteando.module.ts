@@ -8,9 +8,6 @@ import { LoginComponent } from '../componentes/login/login.component';
 import { ErrorComponent } from '../componentes/error/error.component';
 import { PrincipalComponent } from '../componentes/principal/principal.component';
 import { AgilidadAritmeticaComponent } from '../componentes/agilidad-aritmetica/agilidad-aritmetica.component';
-import { MenuComponent } from '../componentes/menu/menu.component';
-import { AdivinaMasListadoComponent } from '../componentes/adivina-mas-listado/adivina-mas-listado.component';
-import { AgilidadMasListadoComponent } from '../componentes/agilidad-mas-listado/agilidad-mas-listado.component';
 import { ListadoComponent } from '../componentes/listado/listado.component'
 import { JuegosComponent } from '../componentes/juegos/juegos.component';
 import { RegistroComponent } from '../componentes/registro/registro.component';
@@ -54,8 +51,6 @@ const MiRuteo = [
       { path: '', component: MenuCardComponent, canActivate: [AuthGuardGuard] },
       { path: 'Adivina', component: AdivinaElNumeroComponent, canActivate: [AuthGuardGuard] },
       { path: 'Agilidad', component: AgilidadAritmeticaComponent, canActivate: [AuthGuardGuard] },
-      { path: 'AdivinaMasListado', component: AdivinaMasListadoComponent, canActivate: [AuthGuardGuard] },
-      { path: 'AgilidadaMasListado', component: AgilidadMasListadoComponent, canActivate: [AuthGuardGuard] },
       { path: 'Anagrama', component: AnagramaComponent, canActivate: [AuthGuardGuard] },
       { path: 'Tateti', component: TatetiComponent, canActivate: [AuthGuardGuard] },
       { path: 'PiedraPapelTijera', component: PiedraPapelTijeraComponent, canActivate: [AuthGuardGuard] }

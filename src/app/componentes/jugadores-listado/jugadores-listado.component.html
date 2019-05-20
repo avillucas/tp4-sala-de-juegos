@@ -1,18 +1,14 @@
 <table class="table table-condensed">
   <thead>
     <tr>
-      <th>Fecha</th>
-      <th>Fecha</th>
-      <th>Usuario</th>
-      <th>Gano</th>
+      <th>Nombre</th>
+      <th>Email</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let jugador of listado" >
-      <td>{{jugador.usuario}} </td>
-      <td>{{jugador.cuit}} </td>
-      <td>{{jugador.sexo | sexo| uppercase}} </td>
-      <td>{{jugador.gano}} </td>
+    <tr *ngFor="let jugador of jugadores" >
+      <td>{{jugador.nombre}} </td>
+      <td>{{jugador.email}} </td>
     </tr>
   </tbody>
 </table>

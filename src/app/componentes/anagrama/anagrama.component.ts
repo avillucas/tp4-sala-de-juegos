@@ -38,7 +38,7 @@ export class AnagramaComponent implements OnInit {
       // this.MostarMensaje('Sos un Genio!!!', true);
       this.ShowMensaje('Gano');
     } else {
-      this.ShowMensaje('Estuviste Cerca Proba de nuevo!!! o Intenta con otra palabra ');
+      this.ShowMensaje('Estuviste Cerca la palabra era ' + this.nuevoJuego.PalabraOrdenada + ' !!! o Intenta con otra palabra. ');
     }
   }
 

@@ -13,6 +13,10 @@ export class JuegoAnagrama extends Juego {
     return this.palabraDesordenada;
   }
 
+  get PalabraOrdenada(): string {
+    return this.palabraOrdenada;
+  }
+
   set PalabraIngresada(palabraIngresada: string) {
     this.palabraIngresada = palabraIngresada;
   }

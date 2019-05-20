@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JugadoresService } from '../../servicios/jugadores.service';
+import { UsuariosService } from '../../servicios/usuarios.service';
 
 @Component({
   selector: 'app-jugadores-listado',
@@ -8,32 +9,18 @@ import { JugadoresService } from '../../servicios/jugadores.service';
 })
 export class JugadoresListadoComponent implements OnInit {
 
-  listado: any;
-  miJugadoresServicio: JugadoresService;
+  jugadores: any;
 
-  constructor(serviceJugadores: JugadoresService) {
-    this.miJugadoresServicio = serviceJugadores;
+  constructor(private dao: UsuariosService) {
+    this.traerTodos();
   }
 
   ngOnInit() {
   }
 
-  TraerTodos() {
-    this.miJugadoresServicio.traertodos('jugadores/', 'todos').then(data => {
-      this.listado = data;
+  private traerTodos() {
+    this.dao.listar().then(data => {
+      this.jugadores = data;
     });
   }
-
-  TraerGanadores() {
-    this.miJugadoresServicio.traertodos('jugadores/', 'ganadores').then(data => {
-      this.listado = data;
-    });
-  }
-
-  TraerPerdedores() {
-    this.miJugadoresServicio.traertodos('jugadores/', 'perdedores').then(data => {
-      this.listado = data;
-    });
-  }
-
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuariosService } from '../../servicios/usuarios.service';
+import { AuthService } from '../../servicios/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -9,15 +10,15 @@ import { UsuariosService } from '../../servicios/usuarios.service';
 export class HeaderComponent implements OnInit {
 
   logueado: boolean;
-  datosUsuario: any;
+  nombreUsuario: string;
 
-  constructor(private dao: UsuariosService) {
-    this.logueado = this.dao.IsLoggedIn();
-    this.datosUsuario = this.dao.getPayload();
+  constructor(private auth: AuthService) {
+    this.logueado = this.auth.isLogued();
+    this.nombreUsuario = this.auth.getNombre();
   }
 
   get NombreCompleto(): string {
-    return this.datosUsuario.name;
+    return this.nombreUsuario;
   }
 
   ngOnInit() {
