@@ -21,6 +21,7 @@ import { TatetiComponent } from '../componentes/tateti/tateti.component';
 import { PiedraPapelTijeraComponent } from '../componentes/piedra-papel-tijera/piedra-papel-tijera.component';
 import { AuthGuardGuard } from '../guards/auth-guard.guard';
 import { ListadosMenuComponent } from '../componentes/listados-menu/listados-menu.component';
+import { SimonComponent } from '../componentes/simon/simon.component';
 
 
 // declaro donde quiero que se dirija
@@ -53,7 +54,8 @@ const MiRuteo = [
       { path: 'Agilidad', component: AgilidadAritmeticaComponent, canActivate: [AuthGuardGuard] },
       { path: 'Anagrama', component: AnagramaComponent, canActivate: [AuthGuardGuard] },
       { path: 'Tateti', component: TatetiComponent, canActivate: [AuthGuardGuard] },
-      { path: 'PiedraPapelTijera', component: PiedraPapelTijeraComponent, canActivate: [AuthGuardGuard] }
+      { path: 'PiedraPapelTijera', component: PiedraPapelTijeraComponent, canActivate: [AuthGuardGuard] },
+      { path: 'Simon', component: SimonComponent, canActivate: [AuthGuardGuard] },
     ]
   },
   { path: '**', component: ErrorComponent },

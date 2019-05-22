@@ -1,3 +1,5 @@
 <button *ngIf="!tomado" (click)="onClick()">ELEGIR</button>
 <span *ngIf="tomado && deUsuario" >X</span>
-<span *ngIf="tomado && !deUsuario" >O</span>
+<span *ngIf="tomado && deMaquina" >O</span>
+<span *ngIf="tomado && !deMaquina  && !deUsuario" class="bloqueado"></span>
+

@@ -4,31 +4,25 @@
 </div>
 <app-ayuda></app-ayuda>
 <div class="row">
-    <div class="col-lg-2"></div>
-    <div class="col-lg-8 ">
+    <div class="col-3"></div>
+    <div class="col-6 ">
         <table>
           <tr>
-            <td><app-tateti-casillero  [tomado]="EstaTomado(1)" (TomarCasillero)="Tomar(1)"  ></app-tateti-casillero></td>
-            <td><app-tateti-casillero  [tomado]="EstaTomado(2)" (TomarCasillero)="Tomar(2)"  ></app-tateti-casillero></td>
-            <td><app-tateti-casillero  [tomado]="EstaTomado(3)" (TomarCasillero)="Tomar(3)"  ></app-tateti-casillero></td>
+            <td class="derecho inferior superior izquierdo"><app-tateti-casillero  [tomado]="EstaTomado(1)"  [deMaquina]="EsDeMaquina(1)"  (TomarCasillero)="Tomar(1)"  ></app-tateti-casillero></td>
+            <td class="derecho inferior superior izquierdo"><app-tateti-casillero  [tomado]="EstaTomado(2)"  [deMaquina]="EsDeMaquina(2)"  (TomarCasillero)="Tomar(2)"  ></app-tateti-casillero></td>
+            <td class="derecho inferior superior izquierdo"><app-tateti-casillero  [tomado]="EstaTomado(3)"  [deMaquina]="EsDeMaquina(3)"  (TomarCasillero)="Tomar(3)"  ></app-tateti-casillero></td>
           </tr>
           <tr>
-              <td><app-tateti-casillero  [tomado]="EstaTomado(4)" (TomarCasillero)="Tomar(4)"  ></app-tateti-casillero></td>
-              <td><app-tateti-casillero  [tomado]="EstaTomado(5)" (TomarCasillero)="Tomar(5)"  ></app-tateti-casillero></td>
-              <td><app-tateti-casillero  [tomado]="EstaTomado(6)" (TomarCasillero)="Tomar(6)"  ></app-tateti-casillero></td>
+              <td class="derecho inferior superior izquierdo"><app-tateti-casillero  [tomado]="EstaTomado(4)"  [deMaquina]="EsDeMaquina(4)"  (TomarCasillero)="Tomar(4)"  ></app-tateti-casillero></td>
+              <td class="derecho inferior superior izquierdo"><app-tateti-casillero  [tomado]="EstaTomado(5)"  [deMaquina]="EsDeMaquina(5)"  (TomarCasillero)="Tomar(5)"  ></app-tateti-casillero></td>
+              <td class="derecho inferior superior izquierdo"><app-tateti-casillero  [tomado]="EstaTomado(6)"  [deMaquina]="EsDeMaquina(6)"  (TomarCasillero)="Tomar(6)"  ></app-tateti-casillero></td>
           </tr>
           <tr>
-              <td><app-tateti-casillero  [tomado]="EstaTomado(7)" (TomarCasillero)="Tomar(7)"  ></app-tateti-casillero></td>
-              <td><app-tateti-casillero  [tomado]="EstaTomado(8)" (TomarCasillero)="Tomar(8)"  ></app-tateti-casillero></td>
-              <td><app-tateti-casillero  [tomado]="EstaTomado(9)" (TomarCasillero)="Tomar(9)"  ></app-tateti-casillero></td>
+              <td class="derecho inferior superior izquierdo"><app-tateti-casillero  [tomado]="EstaTomado(7)"  [deMaquina]="EsDeMaquina(7)"  (TomarCasillero)="Tomar(7)"  ></app-tateti-casillero></td>
+              <td class="derecho inferior superior izquierdo"><app-tateti-casillero  [tomado]="EstaTomado(8)"  [deMaquina]="EsDeMaquina(8)"  (TomarCasillero)="Tomar(8)"  ></app-tateti-casillero></td>
+              <td class="derecho inferior superior izquierdo"><app-tateti-casillero  [tomado]="EstaTomado(9)"  [deMaquina]="EsDeMaquina(9)"   (TomarCasillero)="Tomar(9)"  ></app-tateti-casillero></td>
           </tr>
         </table>
-        <!--
-        <dl>
-          <dt>Leyenda</dt>
-          <dd>Usuario : X</dd>
-          <dd>Maquina : O</dd>
-        </dl>
-        -->
     </div>
+    <div class="col-3"></div>
 </div>

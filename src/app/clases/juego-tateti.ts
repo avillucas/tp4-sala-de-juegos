@@ -17,6 +17,14 @@ export class JuegoTateti extends Juego {
     return (this.disponibles.indexOf(casillero) === -1);
   }
 
+  public EsDeJugador(casillero: Casillero): boolean {    
+    return (this.casillerosJugador.indexOf(casillero) !== -1);
+  }
+
+  public EsDeMaquina(casillero: Casillero): boolean {    
+    return (this.casillerosMaquina.indexOf(casillero) !== -1);
+  }
+
   public MaquinaJugar() {
     // un numero al azar para elegir entre los disponibles
     const casilleroSeleccionado = this.traerCasilleroDisponibleAlAzar();
@@ -86,6 +94,10 @@ export class JuegoTateti extends Juego {
     return (!this.terminado && this.disponibles.length > 0);
   }
 
+  public JuegoTerminado(): boolean {
+    return !this.QuedanMovidas;
+  }
+
   private verificarSiTomoTresCasilleros(casillero1, casillero2, casillero3): boolean {
     if (
       this.casillerosJugador.indexOf(casillero1) !== -1
@@ -152,6 +164,14 @@ export class JuegoTateti extends Juego {
       this.gano = false;
       this.terminado = true;
     }
+    if(this.terminado){
+      this.bloquearTodos();
+    }
     return (this.gano);
   }
+
+  private bloquearTodos(){
+    this.disponibles = [];
+  }
+
 }

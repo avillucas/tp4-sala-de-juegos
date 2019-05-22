@@ -1,3 +1,40 @@
-<p>
-  simon works!
-</p>
+<div class="row">
+    <div class="col-lg-10">
+    <strong>Vamos a mostrarte {{ nuevoJuego.CantidadSecuenciasParaGanar }} secuencias de colores intenta replicarlas  para ganar </strong>
+    <br/>
+    <button (click)="NuevoJuego()" class="btn btn-success btn-lg"  [hidden]="ocultarNuevoJuego" >Empezar!!</button>
+    <app-ayuda ></app-ayuda>
+  </div>
+</div>
+<div class="row" [hidden]="!ocultarNuevoJuego" >
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8 ">
+      <svg _ngcontent-c5="" xml:space="preserve" xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" x="0px" xmlns="http://www.w3.org/2000/svg" y="0px">
+        <path _ngcontent-c5="" d="M256,0C115.3,0,0,115.3,0,256s115.3,256,256,256s256-115.3,256-256S396.7,0,256,0z" style="fill:#495A79;"></path>
+        <path _ngcontent-c5="" d="M512,256c0,140.7-115.3,256-256,256V0C396.7,0,512,115.3,512,256z" style="fill:#42516D;"></path>
+        <path _ngcontent-c5="" d="M433.495,271h-92.637L271,340.858v92.637c0,9.023,7.988,16.295,17.49,14.795
+          c81.812-13.77,146.03-77.988,159.8-159.8C449.828,279.353,442.761,271,433.495,271z" class="clickeable" id="colorVerde"  (click)="PresionaVerde()" style="fill:#25B987;opacity:0.2;"  ></path>
+        <path _ngcontent-c5="" d="M78.505,271c-9.265,0-16.333,8.353-14.795,17.49c13.77,81.812,77.988,146.03,159.8,159.8
+          c9.553,1.509,17.49-5.836,17.49-14.795v-92.637L171.142,271H78.505z"  class="clickeable" id="colorRojo" (click)="PresionaRojo()" style="fill:#D94158;opacity:0.2;"></path>
+        <path _ngcontent-c5="" d="M223.51,63.71c-81.812,13.77-146.03,77.988-159.8,159.8C62.172,232.647,69.24,241,78.505,241h92.637
+          L241,171.142V78.505C241,69.439,232.933,62.224,223.51,63.71z"  class="clickeable"  id="colorAmarillo" (click)="PresionaAmarillo()" style="fill:#FFCD33;opacity:0.2;"></path>
+        <path _ngcontent-c5="" d="M433.495,241c9.265,0,16.333-8.353,14.795-17.49c-13.77-81.812-77.988-146.03-159.8-159.8
+          C279.212,62.19,271,69.339,271,78.505v92.637L340.858,241H433.495z" class="clickeable"  id="colorAzul" (click)="PresionaAzul()" style="fill:#4596E6;opacity:0.2;"></path>
+        <g _ngcontent-c5=""> </g>
+        <g _ngcontent-c5=""></g>
+        <g _ngcontent-c5=""></g>
+        <g _ngcontent-c5=""></g>
+        <g _ngcontent-c5=""></g>
+        <g _ngcontent-c5=""></g>
+        <g _ngcontent-c5=""></g>
+        <g _ngcontent-c5=""></g>
+        <g _ngcontent-c5=""></g>
+        <g _ngcontent-c5=""></g>
+        <g _ngcontent-c5=""></g>
+        <g _ngcontent-c5=""></g>
+        <g _ngcontent-c5=""></g>
+        <g _ngcontent-c5=""></g>
+        <g _ngcontent-c5=""></g>
+      </svg>
+  </div>
+</div>

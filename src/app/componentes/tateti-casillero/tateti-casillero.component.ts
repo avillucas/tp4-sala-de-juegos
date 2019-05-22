@@ -9,16 +9,18 @@ import { Casillero } from '../../enums/casilleros.enum';
 export class TatetiCasilleroComponent implements OnInit {
 
   @Input('tomado') tomado: boolean;
+  @Input('deMaquina') deMaquina: boolean;
   @Output() TomarCasillero = new EventEmitter();
-
-
-  deUsuario: boolean;
+ 
+  deUsuario: boolean;  
 
   constructor() {
     this.tomado = false;
     this.deUsuario = false;
+    this.deMaquina = false;    
   }
 
+  
   ngOnInit() {
   }
 
@@ -28,7 +30,8 @@ export class TatetiCasilleroComponent implements OnInit {
     }
     this.tomado = true;
     this.deUsuario = true;
-    this.TomarCasillero.emit();
+    this.TomarCasillero.emit();    
+    this.deMaquina = false;
   }
 
 }

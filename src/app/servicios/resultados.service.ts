@@ -20,7 +20,8 @@ export class ResultadosService {
 
   public cargar(juego: Juego) {
     const data = { gano: juego.gano, juego: juego.nombre };
-    return this.miHttp.httpPostP(this.apiUrl, data);
+    const token = this.auth.getTokenRaw();
+    return this.miHttp.httpPostAutorized(this.apiUrl, data, token);
   }
 
 }

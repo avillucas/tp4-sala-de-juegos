@@ -17,13 +17,13 @@ export class AgilidadAritmeticaComponent extends JuegosComponent implements OnIn
   nuevoJuego: JuegoAgilidad;
   ocultarVerificar: boolean;
   Tiempo: number;
-  tiempoIncial: number=10;
+  tiempoIncial: number = 10;
   repetidor: any;
   numeroIngresado: number;
   private subscription: Subscription;
 
   ngOnInit() {
-    this.nuevoJuego.iniciar();   
+    this.nuevoJuego.iniciar();
   }
 
   constructor(resultadosDao: ResultadosService) {
@@ -36,7 +36,7 @@ export class AgilidadAritmeticaComponent extends JuegosComponent implements OnIn
     this.ocultarVerificar = false;
     this.repetidor = setInterval(() => {
       this.Tiempo--;
-      if(this.Tiempo === 0) {
+      if (this.Tiempo === 0) {
         clearInterval(this.repetidor);
         this.verificar();
         this.ocultarVerificar = true;
@@ -48,24 +48,25 @@ export class AgilidadAritmeticaComponent extends JuegosComponent implements OnIn
 
   verificar() {
     this.ocultarVerificar = false;
-    this.nuevoJuego.RespuestaIngresada = this.numeroIngresado;    
-    if(this.nuevoJuego.verificar()){
-      this.ayuda.MostrarGanador('Lo resolviste sos un Genio!');      
-    }else{
-      let respuestaStr = ' Era '+this.nuevoJuego.Respuesta; 
-      respuestaStr += ( this.nuevoJuego.RespuestaIngresada ) ?  ' pero no llegaste a completar la respuesta. ' :' y pusiste '+this.nuevoJuego.RespuestaIngresada+' !!'
+    this.nuevoJuego.RespuestaIngresada = this.numeroIngresado;
+    if (this.nuevoJuego.verificar()) {
+      this.ayuda.MostrarGanador('Lo resolviste sos un Genio!');
+    } else {
+      let respuestaStr = ' Era ' + this.nuevoJuego.Respuesta;
+      // tslint:disable-next-line:max-line-length
+      respuestaStr += (this.nuevoJuego.RespuestaIngresada) ? ' pero no llegaste a completar la respuesta. ' : ' y pusiste ' + this.nuevoJuego.RespuestaIngresada + ' !!'
       this.ayuda.MostrarPerdedor(respuestaStr);
     }
     this.guardarResultado(this.nuevoJuego);
-    this.reiniciar();        
+    this.reiniciar();
   }
 
-  private reiniciar() {    
+  private reiniciar() {
     this.nuevoJuego.reiniciar();
     this.ocultarVerificar = true;
-    this.Tiempo = this.tiempoIncial;   
+    this.Tiempo = this.tiempoIncial;
     clearInterval(this.repetidor);
   }
-  
-  
+
+
 }
