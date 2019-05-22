@@ -17,9 +17,9 @@ export class AgilidadAritmeticaComponent extends JuegosComponent implements OnIn
   nuevoJuego: JuegoAgilidad;
   ocultarVerificar: boolean;
   Tiempo: number;
-  tiempoIncial: number = 10;
+  tiempoIncial: number = 15;
   repetidor: any;
-  numeroIngresado: number;
+  numeroIngresado: string;
   private subscription: Subscription;
 
   ngOnInit() {
@@ -33,6 +33,8 @@ export class AgilidadAritmeticaComponent extends JuegosComponent implements OnIn
   }
 
   NuevoJuego() {
+    console.info('nuevoJuego')
+    this.nuevoJuego.Jugar();
     this.ocultarVerificar = false;
     this.repetidor = setInterval(() => {
       this.Tiempo--;
@@ -48,13 +50,15 @@ export class AgilidadAritmeticaComponent extends JuegosComponent implements OnIn
 
   verificar() {
     this.ocultarVerificar = false;
-    this.nuevoJuego.RespuestaIngresada = this.numeroIngresado;
-    if (this.nuevoJuego.verificar()) {
+    this.nuevoJuego.CargarRespuestaIngresada = this.numeroIngresado;
+    this.nuevoJuego.verificar();
+    if (this.nuevoJuego.gano) {
       this.ayuda.MostrarGanador('Lo resolviste sos un Genio!');
     } else {
-      let respuestaStr = ' Era ' + this.nuevoJuego.Respuesta;
-      // tslint:disable-next-line:max-line-length
-      respuestaStr += (this.nuevoJuego.RespuestaIngresada) ? ' pero no llegaste a completar la respuesta. ' : ' y pusiste ' + this.nuevoJuego.RespuestaIngresada + ' !!'
+      let respuestaStr =  ' Era ' + this.nuevoJuego.Respuesta+' pero no llegaste a completar la respuesta.' ;
+      if(this.nuevoJuego.RespuestaIngresada) {
+        respuestaStr =' Era ' + this.nuevoJuego.Respuesta+' y pusiste '+this.nuevoJuego.RespuestaIngresada + ' !!'        
+      }
       this.ayuda.MostrarPerdedor(respuestaStr);
     }
     this.guardarResultado(this.nuevoJuego);
@@ -65,6 +69,7 @@ export class AgilidadAritmeticaComponent extends JuegosComponent implements OnIn
     this.nuevoJuego.reiniciar();
     this.ocultarVerificar = true;
     this.Tiempo = this.tiempoIncial;
+    this.numeroIngresado  = '';
     clearInterval(this.repetidor);
   }
 

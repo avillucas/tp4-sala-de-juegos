@@ -5,17 +5,17 @@
   <button (click)="NuevoJuego()" class="btn btn-success btn-lg"  [hidden]="!ocultarVerificar" >Empezar!!</button>
   
   <div class="row"  [hidden]="ocultarVerificar" >
-      <div class="col-lg-4 operando">{{nuevoJuego.primerNumero}}</div>
-      <div class="col-lg-4 operador">{{nuevoJuego.operador | operador  }}</div>
-      <div class="col-lg-4 operando">{{nuevoJuego.segundoNumero}}</div>
+      <div class="col-lg-10 resultado">
+        <span class="operando">{{nuevoJuego.primerNumero}}</span>
+        <span class="operador">{{nuevoJuego.operador | operador  }}</span>
+        <span class="operando">{{nuevoJuego.segundoNumero}}</span>
+        <span class="igual">=</span>
+        <input [(ngModel)]="numeroIngresado" placeholder="Resultado" name="numeroIngresado" type="number" />        
+      </div>    
   </div>
-  <div class="row"  [hidden]="ocultarVerificar || numeroIngresado == '' " >    
-    <div class="col-lg-12 resultado">
-        <h2>Ingrese el resultado</h2>
-        <input [(ngModel)]="numeroIngresado" placeholder="Ingrese el resultado de la ecuasión" name="numeroIngresado" type="number" class="form-control"/>
-      </div>      
-      <div >
-          <button (click)="verificar()" class="btn btn-success btn-lg">Verificar {{Tiempo}} </button>
+  <div class="row"  [hidden]="ocultarVerificar " >    
+    <div class="col-lg-10 resultado">        
+        <button (click)="verificar()" class="btn btn-success btn-lg">Verificar {{Tiempo}} </button>        
       </div>    
   </div>
 </form>

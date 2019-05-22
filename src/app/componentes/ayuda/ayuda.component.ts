@@ -77,6 +77,18 @@ export class AyudaComponent implements OnInit {
     this.tipo = Ayuda.Info;
   }
 
+  OcultarEsperando() {
+    this.mostrar = false;
+    this.esperando = false;    
+  }
+
+  MostrarMaquinaJugando() {
+    this.mensaje = 'Maquina Jugando';
+    this.mostrar = true;
+    this.esperando = true;
+    this.tipo = Ayuda.Info;
+  }
+
   MostrarMensajeRegistro() {
     this.mensaje = 'El usuario se creo correctamente. Ingrese los mismos datos desde la pantalla de inicio.';
     this.mostrar = true;

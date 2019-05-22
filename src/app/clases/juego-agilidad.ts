@@ -14,8 +14,8 @@ export class JuegoAgilidad extends Juego {
     super('Agilidad Aritmetica', gano, jugador);
   }
 
-  set RespuestaIngresada(respuestaIngresada: number) {
-    this.respuestaIngresada = respuestaIngresada;
+  set CargarRespuestaIngresada(respuestaIngresada: string) {
+    this.respuestaIngresada = Number(respuestaIngresada);
   }
 
   set PrimerNumero(primerNumero: number) {
@@ -30,7 +30,7 @@ export class JuegoAgilidad extends Juego {
     return this.respuesta;
   }
 
-  get RespuestaIngresada(){
+  get RespuestaIngresada() :number{
     return this.respuestaIngresada;
   }
 
@@ -83,6 +83,10 @@ export class JuegoAgilidad extends Juego {
     return this.randomInt(agilidadConfig.min, agilidadConfig.max);
   }
 
+  public Jugar(){
+    this.generarOperacion();
+  }
+  
   private generarOperacion() {
     this.primerNumero = this.traerNumeroAlAzar();
     this.segundoNumero = this.traerNumeroAlAzar();
@@ -92,8 +96,7 @@ export class JuegoAgilidad extends Juego {
   }
 
   public iniciar() {
-    this.resetear();
-    this.generarOperacion();
+    this.resetear();    
   }
   public reiniciar() {
     this.resetear();
@@ -104,9 +107,10 @@ export class JuegoAgilidad extends Juego {
   }
 
   private resetear() {
-    this.primerNumero = 0;
-    this.segundoNumero = 0;
+    this.primerNumero = null;
+    this.segundoNumero = null;
     this.operador = Operador.Suma;
+    this.gano = null;
   }
 
   public verificar(): boolean {    

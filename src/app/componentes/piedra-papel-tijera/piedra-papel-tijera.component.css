@@ -1,0 +1,12 @@
+.piedra, .papel, .tijera{
+    
+}
+img{
+    width:12em;
+    cursor:pointer;
+}
+
+.piedra, .tijera{
+    margin-top:7em;
+}
+

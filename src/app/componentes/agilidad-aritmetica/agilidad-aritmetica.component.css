@@ -1,3 +1,19 @@
-.operador, .operando{font-size:5em;}
-.operador{}
-.operando{}
+.operador, .operando, .igual{font-size:5em;}
+.operador{
+
+}
+.operando{
+
+}
+.igual{
+
+}
+input{ 
+    width: 5em;    
+    position: relative;
+    font-size: 5em;
+    background-color: transparent;
+    border: thin solid;
+    margin: 0;
+    padding: 0;
+}

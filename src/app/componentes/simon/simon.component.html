@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-lg-10">
-    <strong>Vamos a mostrarte {{ nuevoJuego.CantidadSecuenciasParaGanar }} secuencias de colores intenta replicarlas  para ganar </strong>
+        <h1>{{ nuevoJuego.nombre }}!</h1>
+        <strong>Vamos a mostrarte {{ nuevoJuego.CantidadSecuenciasParaGanar }} secuencias de colores intenta replicarlas  para ganar </strong>
     <br/>
     <button (click)="NuevoJuego()" class="btn btn-success btn-lg"  [hidden]="ocultarNuevoJuego" >Empezar!!</button>
     <app-ayuda ></app-ayuda>
