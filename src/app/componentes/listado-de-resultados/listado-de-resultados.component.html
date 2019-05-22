@@ -8,7 +8,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let resultado of resultados">
-        <td>{{resultado.fecha}} </td>
+        <td>{{resultado.time | date:'hh:mm dd/MM/yyyy' }} </td>
         <td>{{resultado.juego}} </td>
         <td *ngIf="resultado.gano">Gano </td>
         <td *ngIf="!resultado.gano">Perdio</td>
