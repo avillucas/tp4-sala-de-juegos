@@ -32,8 +32,7 @@ export class AgilidadAritmeticaComponent extends JuegosComponent implements OnIn
     this.reiniciar();
   }
 
-  NuevoJuego() {
-    console.info('nuevoJuego')
+  NuevoJuego() {    
     this.nuevoJuego.Jugar();
     this.ocultarVerificar = false;
     this.repetidor = setInterval(() => {
@@ -49,6 +48,8 @@ export class AgilidadAritmeticaComponent extends JuegosComponent implements OnIn
   }
 
   verificar() {
+    //en caso de que sea antes
+    clearInterval(this.repetidor);
     this.ocultarVerificar = false;
     this.nuevoJuego.CargarRespuestaIngresada = this.numeroIngresado;
     this.nuevoJuego.verificar();

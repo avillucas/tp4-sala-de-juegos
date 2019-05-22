@@ -1,8 +1,8 @@
-<form name="juego">
+<form name="juego" (submit)="verificar()">
   <strong>Vamos a mostrarte una cuenta aritmetica debes completar su resultado en {{ tiempoIncial }} segundos </strong>  
   <app-ayuda ></app-ayuda>  
   <br/>
-  <button (click)="NuevoJuego()" class="btn btn-success btn-lg"  [hidden]="!ocultarVerificar" >Empezar!!</button>
+  <button type="button" (click)="NuevoJuego()" class="btn btn-success btn-lg"  [hidden]="!ocultarVerificar" >Empezar!!</button>
   
   <div class="row"  [hidden]="ocultarVerificar" >
       <div class="col-lg-10 resultado">
@@ -15,7 +15,7 @@
   </div>
   <div class="row"  [hidden]="ocultarVerificar " >    
     <div class="col-lg-10 resultado">        
-        <button (click)="verificar()" class="btn btn-success btn-lg">Verificar {{Tiempo}} </button>        
+        <button type="submit" class="btn btn-success btn-lg">Verificar {{Tiempo}} </button>        
       </div>    
   </div>
 </form>

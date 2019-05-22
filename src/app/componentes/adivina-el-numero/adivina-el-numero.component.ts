@@ -18,11 +18,13 @@ export class AdivinaElNumeroComponent extends JuegosComponent implements OnInit 
   contador: number;
   ocultarVerificar: boolean;
   nuevoJuego: JuegoAdivina;
+  totalOportunidades: number;
 
   constructor(resultadosDao: ResultadosService) {
     super(resultadosDao);
     this.nuevoJuego = new JuegoAdivina();
     this.ocultarVerificar = false;
+    this.totalOportunidades = 6;
   }
 
   generarnumero() {
@@ -65,46 +67,27 @@ export class AdivinaElNumeroComponent extends JuegosComponent implements OnInit 
     this.ocultarVerificar = true;
     if (this.nuevoJuego.verificar()) {      
       this.enviarJuego.emit(this.nuevoJuego);
-      this.ayuda.MostrarGanador('Adivinate sos un Genio!');
-      this.nuevoJuego.numeroSecreto = 0;
+      this.ayuda.MostrarGanador('Adivinate en '+this.contador+' intento sos un Genio!');            
+      this.guardarResultado(this.nuevoJuego);      
     } else {
-      this.ayuda.MostrarAyuda(this.manejadorMensajeOportunidades());
+      if(this.contador < this.totalOportunidades){
+        this.ayuda.MostrarAyuda(this.manejadorMensajeOportunidades());
+      }else{
+        this.ayuda.MostrarPerdedor('Perdiste! Pasaron las '+this.totalOportunidades+' oportunidades.');
+        this.guardarResultado(this.nuevoJuego);
+      }
     }
-    this.guardarResultado(this.nuevoJuego);
   }
 
   private reinciar() {
     this.nuevoJuego.reiniciar();
-    this.ocultarVerificar = false;
+    this.ocultarVerificar = false;    
   }
 
   ReiniciarJuego() {
     this.reinciar();
   }
-
-  /*
- MostarMensajeCierre(mensaje: string = 'este es el mensaje', ganador: boolean = false) {
-   this.Mensaje = mensaje;
-   if (ganador) {
-     this.popup.MostrarGanador();
-   } else {
-     this.popup.Mostrar();
-   }
-   let x = document.getElementById('snackbar');
-   if (ganador) {
-     x.className = 'show Ganador';
-   } else {
-     x.className = 'show Perdedor';
-   }
-   let modelo = this;
-   setTimeout(function () {
-     x.className = x.className.replace('show', '');
-     modelo.ocultarVerificar = false;
-   }, 3000);
-   console.info('objeto', x);
- }
- */
-
+  
   ngOnInit() {
     this.generarnumero();
   }

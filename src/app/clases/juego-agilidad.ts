@@ -113,11 +113,8 @@ export class JuegoAgilidad extends Juego {
     this.gano = null;
   }
 
-  public verificar(): boolean {    
-    console.info(this.respuestaIngresada ,  this.respuesta);
-    if (this.respuestaIngresada == this.respuesta) {
-      this.gano = true;
-    }
+  public verificar(): boolean {        
+    this.gano =  (this.respuestaIngresada == this.respuesta) ;
     return (this.gano);
   }
 }

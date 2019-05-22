@@ -1,54 +1,30 @@
 <!-- Page Heading -->
 <h1 class="h3 mb-4 text-gray-800">{{ nuevoJuego.nombre }}</h1>
 <h2 class="h6 mb-4 text-gray-800">
-  Elegimos un numero secreto entre 1 y 100 intenta adivinarlo !!!
+  Elegimos un numero secreto entre 1 y 100 intenta adivinarlo !!! Tenes {{ totalOportunidades }} intentos. 
 </h2>
+<app-ayuda (ReiniciarClick)="ReiniciarJuego()"></app-ayuda>      
 <div class="row">
   <div class="col-lg-6">
     <!-- body-->
-    <form name="juego">
-        <app-ayuda (ReiniciarClick)="ReiniciarJuego()"></app-ayuda>
-      <!-- <label>Ingresa un numero: </label> -->
-      <input
-        [(ngModel)]="nuevoJuego.numeroIngresado"
-        placeholder="Ingrese numero que crees que elegimos"
-        name="numeroIngresado"
-        type="text"
-        class="form-control"
-        style="width:50%"
-      />
+    <form name="juego" (submit)="verificar()">
+        <label>Ingresa el numero que crees que elegimos</label>
+        <input
+          [(ngModel)]="nuevoJuego.numeroIngresado"
+          name="numeroIngresado"
+          type="number"
+          class="form-control"
+          style="width:50%"
+        />
+        <br/>
       <button
-        *ngIf="nuevoJuego.numeroSecreto != 0"
-        (click)="verificar()"
+       type="submit"
+        *ngIf="nuevoJuego.numeroSecreto != 0"       
         class="btn btn-success btn-lg"
       >
-        Verificar si Adivine
-      </button>
-
-      <!--
-            <p *ngIf="nuevoJuego.numeroSecreto != 0">
-                <i class="fa fa-spinner fa-spin"></i>Esperando que ingrese un
-                número
-              </p>
-
-          <button
-            *ngIf="nuevoJuego.numeroSecreto == 0"
-            (click)="generarnumero()"
-            class="btn btn-info btn-lg"
-          >
-            No puedo adivinarlo, quiero otro numero!
-          </button>
--->
-
-      <!--
-  <h3 [hidden]="!nuevoJuego.gano">usted adivino el número</h3>
-  <h3 [hidden]="nuevoJuego.gano">usted aún no gano</h3>
-  -->
+        ¿ Adivine ?
+      </button>     
     </form>
-    <!--
-<div id="snackbar">{{ Mensajes }}</div>
--->
-    <app-popup mensaje="{{ Mensaje }}"></app-popup>
     <!-- /.content -->
   </div>
 </div>
