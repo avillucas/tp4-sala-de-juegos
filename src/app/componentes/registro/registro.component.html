@@ -11,50 +11,36 @@
                 <div class="text-center">
                   <h1 class="h4 text-gray-900 mb-4">Crea tu cuenta!</h1>
                 </div>
-                <app-ayuda></app-ayuda>
+                <app-ayuda AlPresionarLogin="LlevarALogin()" ></app-ayuda>
                 <form class="user" [formGroup]="registroForm"  (ngSubmit)="Registrar()" >
                   <div class="form-group">
                     <input type="nombre" class="form-control form-control-user"required [formControl]="nombre" name="nombre"   id="exampleInputNombre" placeholder="Ingrese su nombre">
+                    <div *ngIf="NombreInput.invalid && (NombreInput.dirty || NombreInput.touched)" class="alert alert-danger">
+                        <div *ngIf="NombreInput.errors.required">Complete con un email </div>
+                        <div *ngIf="NombreInput.errors.minlength">Debe tener al menos  4 caracteres</div>
+                        <div *ngIf="NombreInput.errors.maxlength">Debe tener maximo 255 caracteres</div>                        
+                      </div>
                   </div>
                   <div class="form-group">
                     <input type="email" class="form-control form-control-user" required [formControl]="email" name="email"   id="exampleInputEmail" placeholder="Ingrese su email">
+                    <div *ngIf="EmailInput.invalid && (EmailInput.dirty || EmailInput.touched)" class="alert alert-danger">
+                        <div *ngIf="EmailInput.errors.required">Complete con un email </div>
+                        <div *ngIf="EmailInput.errors.minlength">Debe tener al menos  4 caracteres</div>
+                        <div *ngIf="EmailInput.errors.maxlength">Debe tener maximo 255 caracteres</div>
+                        <div *ngIf="EmailInput.errors.pattern">Formato de email valido</div>
+                      </div>
                   </div>
                   <div class="form-group">
                     <input type="password" class="form-control form-control-user" required [formControl]="password" name="password"  id="exampleInputPassword" placeholder="Contraseña">
-                  </div>
-                  <!--
-                  <div class="form-group row">
-                    <div class="col-sm-6 mb-3 mb-sm-0">
-                      <input type="password" class="form-control form-control-user" required [formControl]="password" name="password"  id="exampleInputPassword" placeholder="Contraseña">
-                    </div>
-                    <div class="col-sm-6">
-                      <input type="password" class="form-control form-control-user" required [formControl]="passwordConfirmacion" name="passwordConfirmacion"  id="exampleRepeatPassword" placeholder="Repita contraseña">
-                    </div>
-
-                  </div>
-                  -->
-                  <!--
-                  <a (click)="Registrarse()" class="btn btn-primary btn-user btn-block">
-                   Registrarse
-                  </a>
-                  -->
-                  <button type="submit" class="btn btn-primary btn-user btn-block" [disabled]="!registroForm.valid">Registrate</button>
-                  <!--
-                  <hr>
-                  <a href="index.html" class="btn btn-google btn-user btn-block">
-                    <i class="fab fa-google fa-fw"></i> Register with Google
-                  </a>
-                  <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                    <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                  </a>
-                  -->
+                    <div *ngIf="PasswordInput.invalid && (PasswordInput.dirty || PasswordInput.touched)" class="alert alert-danger">
+                        <div *ngIf="PasswordInput.errors.required">Complete con un email </div>
+                        <div *ngIf="PasswordInput.errors.minlength">Debe tener al menos  4 caracteres</div>
+                        <div *ngIf="PasswordInput.errors.maxlength">Debe tener maximo 255 caracteres</div>                        
+                      </div>
+                  </div>                
+                  <button type="submit" class="btn btn-primary btn-user btn-block" [disabled]="!registroForm.valid">Registrate</button>                  
                 </form>
                 <hr>
-                <!--
-                <div class="text-center">
-                  <a class="small" href="forgot-password.html">Forgot Password?</a>
-                </div>
-                -->
                 <div class="text-center">
                   <a class="small"  routerLink="/Login">Ya tiene una cuenta? Ingresar!</a>
                 </div>

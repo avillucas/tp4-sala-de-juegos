@@ -22,18 +22,19 @@ import { PiedraPapelTijeraComponent } from '../componentes/piedra-papel-tijera/p
 import { AuthGuardGuard } from '../guards/auth-guard.guard';
 import { ListadosMenuComponent } from '../componentes/listados-menu/listados-menu.component';
 import { SimonComponent } from '../componentes/simon/simon.component';
+import { ConfiguracionComponent } from '../componentes/configuracion/configuracion.component';
 
 
 // declaro donde quiero que se dirija
 const MiRuteo = [
-  { path: '', component: PrincipalComponent },
+  { path: '', component: PrincipalComponent   },
   { path: 'Login', component: LoginComponent },
-  { path: 'Jugadores', component: JugadoresListadoComponent, canActivate: [AuthGuardGuard] },
+  //{ path: 'Jugadores', component: JugadoresListadoComponent, canActivate: [AuthGuardGuard] },
   // { path: 'Mapa', component: MapaDeGoogleComponent },
   { path: 'QuienSoy', component: QuienSoyComponent },
   { path: 'Registro', component: RegistroComponent },
-  { path: 'Principal', component: PrincipalComponent },
-  { path: 'Configuracion', component: PrincipalComponent, canActivate: [AuthGuardGuard] },
+  //{ path: 'Principal', component: PrincipalComponent },
+  { path: 'Configuracion', component: ConfiguracionComponent, canActivate: [AuthGuardGuard] },
   {
     path: 'Listados',
     component: ListadoComponent,

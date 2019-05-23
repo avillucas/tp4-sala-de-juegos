@@ -44,6 +44,7 @@ import { AuthGuardGuard } from './guards/auth-guard.guard';
 import { ListadosMenuComponent } from './componentes/listados-menu/listados-menu.component';
 import { ResultadosService } from './servicios/resultados.service';
 import { AuthService } from './servicios/auth.service';
+import { ConfiguracionComponent } from './componentes/configuracion/configuracion.component';
 
 
 
@@ -80,6 +81,7 @@ import { AuthService } from './servicios/auth.service';
     AyudaComponent,
     AlertClassPipe,
     ListadosMenuComponent,
+    ConfiguracionComponent,
 
   ],
   imports: [

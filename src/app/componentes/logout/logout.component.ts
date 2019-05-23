@@ -17,7 +17,7 @@ export class LogoutComponent implements OnInit {
 
   Salir() {
     this.auth.logOut();
-    this.router.navigate(['/Principal']);
+    this.router.navigate(['/']);
   }
 
 }

@@ -10,11 +10,14 @@ export class AyudaComponent implements OnInit {
 
   @Input() mensaje: string;
   @Output() AlPresionarReiniciar = new EventEmitter();
+  @Output() AlPresionarLogin = new EventEmitter();
+  
 
   tipo: Ayuda;
   mostrar: boolean;
   esperando: boolean;
   botonReiniciar: boolean;
+  botonLogin: boolean;
 
   constructor() {
     this.reset();
@@ -26,30 +29,30 @@ export class AyudaComponent implements OnInit {
     this.mostrar = false;
     this.esperando = false;
     this.botonReiniciar = false;
+    this.botonLogin = false;
   }
 
 
 
   MostrarAyuda(mensaje: string) {
+    this.reset();
     this.mensaje = mensaje;
     this.mostrar = true;
-    this.tipo = Ayuda.Warning;
-    this.esperando = false;
+    this.tipo = Ayuda.Warning;    
   }
 
   MostrarError(mensaje: string) {
+    this.reset();    
     this.mensaje = mensaje;
     this.mostrar = true;
-    this.tipo = Ayuda.Danger;
-    this.esperando = false;
+    this.tipo = Ayuda.Danger;    
   }
 
   MostrarGanador(mensaje: string) {
+    this.reset();    
     this.mensaje = mensaje;
     this.mostrar = true;
-    this.tipo = Ayuda.Success;
-    this.esperando = false;
-    this.botonReiniciar = false;
+    this.tipo = Ayuda.Success;    
   }
 
   MostrarGanadorConReiniciar(mensaje: string) {
@@ -58,11 +61,10 @@ export class AyudaComponent implements OnInit {
   }
 
   MostrarPerdedor(mensaje: string) {
+    this.reset();        
     this.mensaje = mensaje;
     this.mostrar = true;
-    this.tipo = Ayuda.Danger;
-    this.esperando = false;
-    this.botonReiniciar = false;
+    this.tipo = Ayuda.Danger;    
   }
 
   MostrarPerdedorConReiniciar(mensaje: string) {
@@ -71,6 +73,7 @@ export class AyudaComponent implements OnInit {
   }
 
   MostrarEsperando() {
+    this.reset();            
     this.mensaje = 'Esperando que ingrese tu respuesta';
     this.mostrar = true;
     this.esperando = true;
@@ -83,6 +86,7 @@ export class AyudaComponent implements OnInit {
   }
 
   MostrarMaquinaJugando() {
+    this.reset();            
     this.mensaje = 'Maquina Jugando';
     this.mostrar = true;
     this.esperando = true;
@@ -90,9 +94,10 @@ export class AyudaComponent implements OnInit {
   }
 
   MostrarMensajeRegistro() {
+    this.reset();            
     this.mensaje = 'El usuario se creo correctamente. Ingrese los mismos datos desde la pantalla de inicio.';
-    this.mostrar = true;
-    this.esperando = true;
+    this.mostrar = true;    
+    this.botonLogin = true;
     this.tipo = Ayuda.Success;
   }
 
@@ -102,6 +107,10 @@ export class AyudaComponent implements OnInit {
 
   ReiniciarClick() {
     this.AlPresionarReiniciar.emit();
+  }
+  
+  LoginClick() {
+    this.AlPresionarLogin.emit();
   }
 
   ngOnInit() {

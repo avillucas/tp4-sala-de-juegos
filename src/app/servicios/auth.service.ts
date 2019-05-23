@@ -21,7 +21,8 @@ export class AuthService {
   }
 
   saveToken(token: string) {
-    localStorage.setItem('token', token);
+    this._token = token;
+    localStorage.setItem('token', this._token);
   }
 
   public isLogued() {
@@ -66,15 +67,20 @@ export class AuthService {
   }
 
   private getPayloadData() {
-    if (typeof this.jwtHelper.decodeToken(this._token).data === 'undefined') {
-      return this.jwtHelper.decodeToken(this._token).nivel;
+    
+    if (this.isLogued()) {
+      return this.jwtHelper.decodeToken(this._token).data;
     }
     return {};
   }
 
   public getNombre() {
-    const data = this.getPayloadData();
-    return data.nombre;
+    let nombre = '';
+    if(this.isLogued()) {      
+      const data = this.getPayloadData();                 
+       nombre= data.nombre;
+    }
+    return nombre;
   }
 
   public getEmail() {

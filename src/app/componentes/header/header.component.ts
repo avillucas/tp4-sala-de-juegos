@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(private auth: AuthService) {
     this.logueado = this.auth.isLogued();
-    this.nombreUsuario = this.auth.getNombre();
+    this.nombreUsuario = this.auth.getEmail();
   }
 
   get NombreCompleto(): string {

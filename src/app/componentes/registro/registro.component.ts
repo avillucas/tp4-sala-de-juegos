@@ -17,22 +17,22 @@ export class RegistroComponent implements OnInit {
 
   constructor(private builder: FormBuilder, private router: Router, private dao: UsuariosService) { }
 
-  nombre = new FormControl('', [
+  nombre = new FormControl( this.nombre, [
     Validators.required,
-    Validators.minLength(1),
+    Validators.minLength(4),
     Validators.maxLength(255)
   ]);
 
-  email = new FormControl('', [
+  email = new FormControl(this.email, [
     Validators.required,
-    Validators.minLength(1),
+    Validators.minLength(4),
     Validators.maxLength(255),
     Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
   ]);
 
-  password = new FormControl('', [
+  password = new FormControl(this.password, [
     Validators.required,
-    Validators.minLength(1),
+    Validators.minLength(4),
     Validators.maxLength(255)
   ]);
 
@@ -48,21 +48,34 @@ export class RegistroComponent implements OnInit {
     this.password.setValue('tester');
   }
 
-  Registrar() {
-    // TODO mostrar los mensajes en ayuda
-    console.info(this.registroForm.errors);
+  get NombreInput(){
+    return this.registroForm.get('nombre');
+  }
 
-    const nombre = this.registroForm.get('nombre').value;
-    const email = this.registroForm.get('email').value;
-    const password = this.registroForm.get('password').value;
+  get EmailInput(){
+    return this.registroForm.get('email');
+  }
+
+  get PasswordInput(){
+    return this.registroForm.get('password');
+  }
+
+  Registrar() {
+    const nombre = this.NombreInput.value;
+    const email = this.EmailInput.value;
+    const password = this.PasswordInput.value;
     //
     this.dao.crear(nombre, email, password).then(data => {
       this.ayuda.MostrarMensajeRegistro();
-    });
+    }).catch(
+      data=>{
+        this.ayuda.MostrarError('Ocurrio un error al intentar registrar');
+      }
+    );
   }
 
-  AlCerrarPopUpRegistro() {
+  LlevarALogin() {
     this.router.navigate(['/Login']);
-  }
+  }  
 
 }

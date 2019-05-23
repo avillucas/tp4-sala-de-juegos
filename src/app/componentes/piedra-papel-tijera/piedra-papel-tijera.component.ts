@@ -61,7 +61,7 @@ export class PiedraPapelTijeraComponent extends JuegosComponent implements OnIni
     //
     const resultado = this.nuevoJuego.Resultado;
     if (this.nuevoJuego.verificar()) {      
-      this.ayuda.MostrarGanador('Elegiste '+resultado + 'sos un Genio!');
+      this.ayuda.MostrarGanador('Elegiste '+resultado + ' sos un Genio!');
     } else if (this.nuevoJuego.esEmpate) {
       this.ayuda.MostrarGanador('Elegiste '+resultado + ' es empate!');
     } else {

@@ -16,7 +16,7 @@ export class UsuariosService {
   }
 
   public crear(nombre: string, email: string, password: string): Promise<Array<any>> {
-    const payload = { 'nombre': nombre, 'email': email, 'password': password };
+    const payload = { 'nombre': nombre, 'email': email, 'clave': password };
     return this.miHttp.httpPostP(this.apiUrl, payload)
       .then(data => { return data; })
       .catch(err => { console.log(err); return null; });

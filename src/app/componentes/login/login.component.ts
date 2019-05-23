@@ -26,16 +26,16 @@ export class LoginComponent implements OnInit {
 
   clase = 'progress-bar progress-bar-info progress-bar-striped ';
 
-  email = new FormControl('', [
+  email = new FormControl(this.email, [
     Validators.required,
-    Validators.minLength(1),
+    Validators.minLength(4),
     Validators.maxLength(255),
     Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
   ]);
 
-  password = new FormControl('', [
+  password = new FormControl( this.password, [
     Validators.required,
-    Validators.minLength(1),
+    Validators.minLength(4),
     Validators.maxLength(255)
   ]);
 
@@ -60,18 +60,25 @@ export class LoginComponent implements OnInit {
   }
 
   Entrar() {
-    const email = this.loginForm.get('email').value;
-    const password = this.loginForm.get('password').value;
+    const email = this.EmailInput.value;
+    const password = this.PasswordInput.value;
     //
-    this.auth.login(email, password).then(data => {
-      console.log(data);
+    this.auth.login(email, password).then(data => {      
       if (data.token) {
         this.auth.saveToken(data.token);
-        this.router.navigate(['/Principal']);
+        this.router.navigate(['/']);
       }
     }).catch(e => {
       this.ayuda.MostrarError('Error en las credenciales, por favor intente con otro usuario como admin@sala.com y admin ');
     });
+  }
+
+  get EmailInput(){
+    return this.loginForm.get('email');
+  }
+
+  get PasswordInput(){
+    return this.loginForm.get('password');
   }
 
 }
