@@ -26,6 +26,18 @@ export class JuegoAgilidad extends Juego {
     this.segundoNumero = segundoNumero;
   }
 
+  get PrimerNumero():number{
+    return this.primerNumero;
+  }
+
+  get Operador():Operador{
+    return this.operador;
+  }
+  
+  get SegundoNumero():number{
+    return this.segundoNumero;
+  }
+
   get Respuesta(){
     return this.respuesta;
   }

@@ -14,7 +14,7 @@ export class PopupComponent implements OnInit {
   private mostrar: boolean;
   private mensajeFinal: boolean;
   private mensajeGanador: boolean;
-  private botonTexto: string;
+  botonTexto: string;
 
   constructor() {
     this.reset();
